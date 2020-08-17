@@ -96,4 +96,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa785701544d3bd4da9bceaf4170b24a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomLevel: 1
+  zoomLevel: 5
+  camera: {fileID: 0}

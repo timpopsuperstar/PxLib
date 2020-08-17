@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera2D : MonoBehaviour
+public class Camera2D : MonoBehaviour, IBounds
 {
-    public int zoomLevel;
+    Vector3 debugCameraPosition;
+    public readonly static int zoomLevel = 5;
     new public Camera camera;
 
     public static Camera2D instance;
 
+    public delegate void OnCameraMoveEvent(Vector2 cameraPosition);
+    public event OnCameraMoveEvent OnCameraMove;
+
     private void Awake()
     {
+
         #region singleton
         if (instance == null)
         {
@@ -22,36 +27,48 @@ public class Camera2D : MonoBehaviour
         }
         #endregion
         camera = GetComponent<Camera>();
+
     }
 
     private void Start()
     {
         SetOrthographicSize();
-        
+        debugCameraPosition = transform.position;
     }
 
     private void Update()
     {
         SetOrthographicSize();
+
+        //Debug Stuff
+        if(debugCameraPosition != transform.position)
+        {
+            MoveCamera(transform.position);
+            debugCameraPosition = transform.position;
+        }
     }        
 
     private void SetOrthographicSize()
     {
-        if (zoomLevel <= 0)
-        {
-            Debug.LogWarning("zoomLevel not set");
-            zoomLevel = 1;
-        }
         camera.orthographicSize = (Screen.height / 2) / zoomLevel;
+    }
+
+    public void MoveCamera(Vector2 newPos)
+    {
+        transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
+        OnCameraMove?.Invoke(transform.position);
+    }
+    public Bounds Bounds
+    {
+        get
+        {
+            var zoom = zoomLevel;
+            var dimensions = new Vector2(Screen.width / zoom, Screen.height / zoom);
+            var center = transform.position;
+            var bounds = new Bounds(center, dimensions);
+            return bounds;
+        }
     }
 }
 
-public static class CameraExtensions
-{
-    public static Bounds OrthographicBounds(Camera camera)
-    {
-        var v1 = camera.ViewportToWorldPoint(Vector3.zero);
-        var v2 = camera.ViewportToWorldPoint(Vector3.one);
-        return new Bounds((v1 + v2) / 2f, (v2 - v1));
-    }
-}
+

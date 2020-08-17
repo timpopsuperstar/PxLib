@@ -2,92 +2,88 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using PxMath;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class UICanvas : MonoBehaviour
 {
-    [Header("Graphic Properties")]
-    public bool drawBackground;
-    [ShowIf("ShowBackgroundProps")] [SerializeField] Sprite canvasSprite;   
-    [ShowIf("ShowBackgroundProps")] [SerializeField] FillType fillType;
+    public Bounds CanvasBounds
+    {
+        get
+        {
+            var zoom = Camera2D.zoomLevel;
+            var dimensions = new Vector2(Screen.width / zoom, Screen.height / zoom);
+            var center = camera2D.transform.position;
+            var bounds = new Bounds(center, dimensions);
+            return bounds;
+        }
+    }
 
-    public bool drawSafeZone;
-    [ShowIf("ShowSafeZoneProps")] [SerializeField] Sprite safeZoneSprite;
+    public Bounds SafeZoneBounds
+    {
+        get
+        {
+            var zoom = Camera2D.zoomLevel;
+            var dimensions = new Vector2(Screen.width / zoom, Screen.height / zoom);
+            var center = camera2D.transform.position;
+            dimensions.x = dimensions.x * .9f;
+            dimensions.y = dimensions.y *= .9f;
+            var bounds = new Bounds(center, dimensions);
+            return bounds;
+        }
+    }
 
-    //Private Properties
-    SpriteRenderer spriteRenderer;
+    public bool drawPanels;
+
+    UIPanel canvasPanel;
+    UIPanel safeZonePanel;
+
     Camera2D camera2D;
-    SpriteRenderer safeZoneRenderer;
+    public static UICanvas instance;
 
-
-    //Editor Functions
-    private bool ShowBackgroundProps { get { return drawBackground; } }
-    public bool ShowSafeZoneProps { get { return drawSafeZone; } }
-
-
-    //MonoBehaviour Methods
     private void Awake()
     {
-        camera2D = Camera2D.instance;
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        if(instance == null)
+        {
+            instance = this;
+            camera2D = Camera2D.instance;            
+        }
+        else
+        {
+            Debug.Log("More than one UICanvas");
+            Destroy(this.gameObject);
+        }
     }
 
     private void Start()
     {
-    }
+        transform.SetParent(camera2D.transform);
+        //transform.position = camera2D.transform.position;
+        transform.position = Vector2.zero;
 
-    private void Update()
-    {
-        DrawCanvas();
-        DrawSafeZone();
-    }
+        canvasPanel = UIPanel.Create
+        (
+            Scratchpad.instance.panelSprite,
+            CanvasBounds,
+            "CanvasPanel",
+            transform,
+            Alignment.Center,
+            Stretch.FullScreen
+        );        
+        //canvasPanel._spriteRenderer.sortingOrder = canvasPanel.transform.parent.hierarchyCount;
+        safeZonePanel = UIPanel.Create
+        (
+            Scratchpad.instance.pinkSquare,
+            CanvasBounds,
+            "SafeZonePanel",
+            canvasPanel.transform,
+            Alignment.Center,
+            Stretch.FullScreen,
+            true
+        );
+        safeZonePanel.GetComponent<SpriteRenderer>().sortingOrder = safeZonePanel.transform.parent.hierarchyCount;
 
-    //Private Method
-    private void DrawCanvas()
-    {
-        var zoom = camera2D.zoomLevel;
-        spriteRenderer.sprite = canvasSprite;
-        spriteRenderer.drawMode = SpriteDrawMode.Sliced;
-        spriteRenderer.size = new Vector2(Screen.width / zoom, Screen.height / zoom);
-        transform.position = (Vector2)camera2D.transform.position;
+        //canvasPanel._spriteRenderer.enabled = drawPanels;
+        //safeZonePanel._spriteRenderer.enabled = drawPanels;
     }
-
-    private void DrawSafeZone()
-    {
-        if(safeZoneRenderer == null)
-        {
-            safeZoneRenderer = new GameObject("SafeZone", typeof(SpriteRenderer)).GetComponent<SpriteRenderer>();
-            safeZoneRenderer.sprite = safeZoneSprite;
-            safeZoneRenderer.drawMode = SpriteDrawMode.Sliced;
-            safeZoneRenderer.size = SafeZone.size;
-            safeZoneRenderer.sortingLayerName = "UI";            
-            safeZoneRenderer.name = "SafeZone";
-        }
-        safeZoneRenderer.size = SafeZone.size;
-        safeZoneRenderer.transform.position = (Vector2)SafeZone.center;
-    }
-
-
-    //Public Properties
-    public Bounds SafeZone
-    {
-        get
-        {
-            var zoom = camera2D.zoomLevel;
-            var dimensions = new Vector2(Screen.width / zoom, Screen.height / zoom);
-            var center = camera2D.transform.position;
-            dimensions.x = Mathf.RoundToInt(dimensions.x * .9f);
-            dimensions.y = Mathf.RoundToInt(dimensions.y *= .9f);              
-            var bounds = new Bounds(center, dimensions);
-            bounds.center = center;
-            return bounds;
-        }            
-    }
-    //Public Methods
-    //public Bounds OrthographicBounds(this Camera camera)
-    //{
-    //    var v1 = camera.ViewportToWorldPoint(Vector3.zero);
-    //    var v2 = camera.ViewportToWorldPoint(Vector3.one);
-    //    return new Bounds((v1 + v2) / 2f, (v2 - v1));
-    //}
 }

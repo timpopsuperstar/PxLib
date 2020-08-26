@@ -18,7 +18,7 @@ public class ItemInventory
     public void InstantiateGridObjects(List<Item> items)
     {
         container = Scratchpad.InstantiateEmpty("Inventory");
-        container.SetParent(UICanvas.instance.transform);
+        //container.SetParent(UICanvas.instance.transform);
         var itemsToAdd = new List<Item>(items);
         for (int y = 0; y < grid.Dimensions.height; y++)
         {

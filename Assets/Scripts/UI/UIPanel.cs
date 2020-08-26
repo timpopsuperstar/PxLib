@@ -7,90 +7,107 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(SpriteRenderer))]
+public enum Alignment { None, Top, TopRight, CenterRight, BottomRight, Bottom, BottomLeft, CenterLeft, TopLeft, Center };
+public enum Stretch { None, Vertical, Horizontal, FullScreen }
+public enum FillType { Fit, Fill, Stretch, Tile, Center };
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class UIPanel : MonoBehaviour, IBounds
 {
-    SpriteRenderer _spriteRenderer;
+    //Private Properties
+    [SerializeField] private Alignment _alignment;
+    [SerializeField] private Stretch _stretch;
+    private Vector2 _defaultSize;
+    private Vector2 _currentSize;
+    private SpriteRenderer _spriteRenderer;
+    private bool _alignToSafeZone;
+    private IBounds _anchor;
+    private Vector3 _previousPosition;
 
-    public Bounds Bounds
-    {
-        get
-        {
-            return new Bounds(transform.position, _spriteRenderer.size);
-        }
-    }
+    //IBounds
+    public Transform Transform { get { return transform; } }
+    public Bounds Bounds { get { return new Bounds(transform.position, _currentSize); }}
+    public Bounds SafeZone { get { return new Bounds(Bounds.center, Bounds.size * .9f); } }
 
-    public Bounds SafeZone
-    {
-        get
-        {
-            return new Bounds(transform.position, _spriteRenderer.size * .9f);
-        }
-    }
+    //Events
+    public delegate void OnMoveEvent(Vector2 position);
+    public event OnMoveEvent OnMove;
+    public delegate void OnSizeChangeEvent(Vector2 size);
+    public event OnSizeChangeEvent OnSizeChange;
 
-    [SerializeField] Alignment _alignment;
     public Alignment Alignment
     {
         get { return _alignment; }
-        set 
-        { 
-            _alignment = value;
-            Draw();
-        }
+        set { _alignment = value; }
     }
 
-    [SerializeField] Stretch _stretch;
     public Stretch Stretch
     {
         get { return _stretch; }
-        set 
-        { 
-            _stretch = value;
-            Draw();
-        }
+        set { _stretch = value;}
     }
 
-    private bool _sizeToSafeZone;
-    public bool SizeToSafeZone
+    public bool AlignToSafeZone
     {
-        get { return _sizeToSafeZone; }
-        set
-        {
-            _sizeToSafeZone = value;
-            Draw();
-        }
+        get { return _alignToSafeZone; }
+        set { _alignToSafeZone = value; }
     }
 
     public Sprite Sprite
     {
         get { return _spriteRenderer.sprite; }
+        set { _spriteRenderer.sprite = value; }
+    }
+    public IBounds Anchor
+    {
+        get { return _anchor; }
+        set { _anchor = value; }
+    }
+    public Vector2 Size
+    {
+        get { return _currentSize; }
         set 
         { 
-            _spriteRenderer.sprite = value;
-            Draw();
+            _currentSize = value; 
+            _spriteRenderer.size = value;
+            OnSizeChange?.Invoke(_currentSize);
+        }
+    }
+    public Vector3 Position
+    {
+        get
+        {
+            return transform.position;
+        }
+        set
+        {
+            _previousPosition = transform.position;
+            transform.position = value;
+            OnMove?.Invoke(transform.position);
         }
     }
 
-    public static UIPanel Create(Sprite sprite, Bounds bounds, string name = "UIPanel", Transform parent = null, Alignment alignment = Alignment.None, Stretch stretch = Stretch.None, bool sizeToSafeZone = false)
+    //constructor
+    public static UIPanel Instantiate(Sprite sprite, IBounds anchor, Vector2 defaultSize, string name = "UIPanel", Alignment alignment = Alignment.None, Stretch stretch = Stretch.None, bool alignToSafeZone = false)
     {
         var panel = new GameObject("UIPanel", typeof(UIPanel)).GetComponent<UIPanel>();
-
-        panel.name = name;
-        panel.transform.position = bounds.center;
-        panel._alignment = alignment;
-        panel.Stretch = stretch;
         panel.Sprite = sprite;
+        panel.name = name;
+
+        panel.transform.position = anchor.Bounds.center;
+        panel._alignment = alignment;
+        panel._stretch = stretch;
+        panel._alignToSafeZone = alignToSafeZone;
+        panel._anchor = anchor;        
+        panel.transform.SetParent(anchor.Transform);
         panel._spriteRenderer.drawMode = SpriteDrawMode.Sliced;
-        panel._spriteRenderer.size = bounds.size;
-        panel.transform.SetParent(parent);
-        if (parent == null)
-        {
-            panel.transform.SetParent(UIManager.instance.Canvas.transform);
-        }
+        panel._spriteRenderer.size = defaultSize;
+        panel._defaultSize = defaultSize;
         panel._spriteRenderer.sortingOrder = panel.transform.hierarchyCount;
         panel._spriteRenderer.sortingLayerName = "UI";
-        panel._sizeToSafeZone = sizeToSafeZone;
+
+
+        panel.Draw();
         return panel;
     }
 
@@ -98,23 +115,92 @@ public class UIPanel : MonoBehaviour, IBounds
     private void Awake()
     {        
         _spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
-    private void Draw()
-    {
-        Scale();
-        Align();
-    }
-
-    private void Scale()
+    void OnEnable()
     {
         
+        OnMove += OnAnchorMove;
     }
 
-    private void Align()
+    void OnDisable()
+    {
+        OnMove -= OnAnchorMove;
+    }
+    //Private Methods
+    private void Draw()
+    {
+        ScaleToAnchor();
+        AlignToAnchor();
+    }
+
+    private void ScaleToAnchor()
+    {
+        var anchorBounds = Anchor.Bounds;
+
+        if (AlignToSafeZone)
+        {
+            anchorBounds = Anchor.SafeZone;
+        }
+        
+        switch (_stretch)
+        {
+            case Stretch.Horizontal:
+                _spriteRenderer.size = new Vector2(anchorBounds.size.x, Bounds.size.y);
+                transform.position = new Vector2(anchorBounds.center.x, transform.position.y);
+                break;
+            case Stretch.Vertical:
+                _spriteRenderer.size = new Vector2(Bounds.size.x, anchorBounds.size.y);
+                transform.position = new Vector2(transform.position.x, anchorBounds.center.y);
+                break;
+            case Stretch.FullScreen:
+                _spriteRenderer.size = anchorBounds.size;
+                transform.position = anchorBounds.center;
+                break;
+            case Stretch.None:
+                _spriteRenderer.size = _defaultSize;
+                transform.position = transform.position;
+                break;
+
+        }
+
+    }
+
+    private void AlignToAnchor()
     {
 
     }
+
+    private void OnAnchorMove(Vector2 anchorPosition)
+    {
+
+    }
+
+    ////Public Methods
+    //public static UIPanel InstantiatePanel(Bounds defaultSize)
+    //{
+    //    var panel = new GameObject("UIPanel", typeof(UIPanel)).GetComponent<UIPanel>();
+
+    //    panel.name = name;
+
+    //    panel.transform.position = bounds.center;
+    //    panel._alignment = alignment;
+    //    panel.Stretch = stretch;
+    //    panel.Sprite = sprite;
+    //    panel._spriteRenderer.drawMode = SpriteDrawMode.Sliced;
+    //    panel._spriteRenderer.size = bounds.size;
+    //    panel.transform.SetParent(parent);
+    //    if (parent == null)
+    //    {
+    //        panel.transform.SetParent(UIManager.instance.Canvas.transform);
+    //    }
+    //    panel._spriteRenderer.sortingOrder = panel.transform.hierarchyCount;
+    //    panel._spriteRenderer.sortingLayerName = "UI";
+    //    panel._alignToSafeZone = sizeToSafeZone;
+
+    //    return panel;
+    //}
 
     //private void ScaleToParent()
     //{
@@ -129,20 +215,20 @@ public class UIPanel : MonoBehaviour, IBounds
     //    }
     //    else
     //    {
-    //        panelSize = UICanvas.instance.CanvasBounds.size;            
-    //    }       
+    //        panelSize = UICanvas.instance.CanvasBounds.size;
+    //    }
 
     //    switch (_stretch)
     //    {
-    //        case Stretch.Horizontal:
+    //        case global::Stretch.Horizontal:
     //            _spriteRenderer.size = new Vector2(panelSize.x, Bounds.size.y);
     //            transform.position = new Vector2(0, transform.position.y);
     //            break;
-    //        case Stretch.Vertical:
+    //        case global::Stretch.Vertical:
     //            _spriteRenderer.size = new Vector2(Bounds.size.x, panelSize.y);
     //            transform.position = new Vector2(transform.position.x, 0);
     //            break;
-    //        case Stretch.FullScreen:
+    //        case global::Stretch.FullScreen:
     //            _spriteRenderer.size = panelSize;
     //            transform.position = Vector2.zero;
     //            break;

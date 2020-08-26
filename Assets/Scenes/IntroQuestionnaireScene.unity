@@ -235,6 +235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraMain
       objectReference: {fileID: 0}
+    - target: {fileID: 8619961356177578979, guid: f0fbff8c4dd42e249b0a8ab0090fd5a7,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 2117953888}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0fbff8c4dd42e249b0a8ab0090fd5a7, type: 3}
 --- !u!1 &2053529372
@@ -280,3 +285,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &2117953888 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8619961356177578978, guid: f0fbff8c4dd42e249b0a8ab0090fd5a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1605496707}
+  m_PrefabAsset: {fileID: 0}

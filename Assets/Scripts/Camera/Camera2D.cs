@@ -4,14 +4,58 @@ using UnityEngine;
 
 public class Camera2D : MonoBehaviour, IBounds
 {
-    Vector3 debugCameraPosition;
-    public readonly static int zoomLevel = 5;
-    new public Camera camera;
+    //IBounds
+    public Transform Transform { get { return transform; } }
 
+    //Events
+    public delegate void OnMoveEvent(Vector2 position);
+    public event OnMoveEvent OnMove;
+    public delegate void OnSizeChangeEvent(Vector2 size);
+    public event OnSizeChangeEvent OnResize;
+
+    public Bounds Bounds
+    {
+        get
+        {
+            var dimensions = new Vector2(Screen.width / ZoomLevel, Screen.height / ZoomLevel);
+            var center = transform.position;
+            var bounds = new Bounds(center, dimensions);
+            return bounds;
+        }
+    }
+
+    public Bounds SafeZone
+    {
+        get
+        {
+            return new Bounds(Bounds.center, Bounds.size * .9f);
+        }
+    }
+    //Public Properties
+    public static int ZoomLevel { get { return 5; } }
+
+    private Vector3 _previousPosition;
+    public Vector3 PreviousPosition { get { return _previousPosition; }set { _previousPosition = value; } }
+
+    public Vector3 Position 
+    { 
+        get 
+        { 
+            return transform.position; 
+        }
+        set
+        {
+            _previousPosition = transform.position;
+            transform.position = value;
+            OnMove?.Invoke(transform.position);
+        }
+    }
+
+    private Camera _camera;
+    public Camera Camera { get { return _camera; } }
+    
+    //Singleton
     public static Camera2D instance;
-
-    public delegate void OnCameraMoveEvent(Vector2 cameraPosition);
-    public event OnCameraMoveEvent OnCameraMove;
 
     private void Awake()
     {
@@ -26,48 +70,28 @@ public class Camera2D : MonoBehaviour, IBounds
             Destroy(this);
         }
         #endregion
-        camera = GetComponent<Camera>();
+        _camera = GetComponent<Camera>();
 
     }
 
     private void Start()
     {
         SetOrthographicSize();
-        debugCameraPosition = transform.position;
     }
 
     private void Update()
     {
         SetOrthographicSize();
-
-        //Debug Stuff
-        if(debugCameraPosition != transform.position)
-        {
-            MoveCamera(transform.position);
-            debugCameraPosition = transform.position;
-        }
     }        
 
     private void SetOrthographicSize()
     {
-        camera.orthographicSize = (Screen.height / 2) / zoomLevel;
+        Camera.orthographicSize = (Screen.height / 2) / ZoomLevel;
     }
 
     public void MoveCamera(Vector2 newPos)
     {
         transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
-        OnCameraMove?.Invoke(transform.position);
-    }
-    public Bounds Bounds
-    {
-        get
-        {
-            var zoom = zoomLevel;
-            var dimensions = new Vector2(Screen.width / zoom, Screen.height / zoom);
-            var center = transform.position;
-            var bounds = new Bounds(center, dimensions);
-            return bounds;
-        }
     }
 }
 

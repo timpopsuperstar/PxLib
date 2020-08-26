@@ -3,10 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Alignment { None, Top, TopRight, CenterRight, BottomRight, Bottom, BottomLeft, CenterLeft, TopLeft, Center};
-public enum Stretch { None, Vertical, Horizontal, FullScreen}
 //Enums
-public enum FillType { Fit, Fill, Stretch, Tile, Center };
+
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
@@ -15,7 +13,6 @@ public class UIManager : MonoBehaviour
     {
         get { return _canvas; }
     }
-
     UIPanel _canvas;
     Camera2D _camera;
 
@@ -36,10 +33,8 @@ public class UIManager : MonoBehaviour
     }
 
     private void Start()
-    {      
-        _canvas = UIPanel.Create(Scratchpad.instance.pinkSquare, _camera.Bounds, "Canvas", _camera.transform, Alignment.Center,
-            Stretch.FullScreen);
+    {
+        _canvas = UIPanel.Instantiate(Scratchpad.instance.pinkSquare, _camera, Vector2.zero, "Canvas", Alignment.None, Stretch.FullScreen);
     }
-
 
 }

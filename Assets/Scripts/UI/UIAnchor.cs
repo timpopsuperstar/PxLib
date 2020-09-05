@@ -3,17 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IBounds
+public abstract class UIAnchor : MonoBehaviour
 {
-   Bounds Bounds { get;}
-   Bounds SafeZone { get; }
-   Transform Transform { get; }
+    Bounds Bounds { get; }
+    Bounds SafeZone { get; }
+    Transform Transform { get; }
 
     public event EventHandler PositionChanged;
     event EventHandler SizeChanged;
-}
-
-public class MyEventArgs : EventArgs
-{
-
 }

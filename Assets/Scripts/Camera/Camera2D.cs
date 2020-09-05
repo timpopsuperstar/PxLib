@@ -1,18 +1,17 @@
-﻿using System.Collections;
+﻿using PxMath;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Xml.Schema;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Camera2D : MonoBehaviour, IBounds
 {
     //IBounds
     public Transform Transform { get { return transform; } }
-
-    //Events
-    public delegate void OnMoveEvent(Vector2 position);
-    public event OnMoveEvent OnMove;
-    public delegate void OnSizeChangeEvent(Vector2 size);
-    public event OnSizeChangeEvent OnResize;
-
     public Bounds Bounds
     {
         get
@@ -23,7 +22,6 @@ public class Camera2D : MonoBehaviour, IBounds
             return bounds;
         }
     }
-
     public Bounds SafeZone
     {
         get
@@ -31,6 +29,33 @@ public class Camera2D : MonoBehaviour, IBounds
             return new Bounds(Bounds.center, Bounds.size * .9f);
         }
     }
+
+    event EventHandler PositionChangedEvent;
+    event EventHandler SizeChangedEvent;
+
+    event EventHandler IBounds.PositionChanged
+    {
+        add
+        {
+            PositionChangedEvent += value;
+        }
+        remove
+        {
+            PositionChangedEvent -= value;
+        }
+    }
+    event EventHandler IBounds.SizeChanged
+    {
+        add
+        {
+            SizeChangedEvent += value;
+        }
+        remove
+        {
+            SizeChangedEvent -= value;
+        }
+    }
+
     //Public Properties
     public static int ZoomLevel { get { return 5; } }
 

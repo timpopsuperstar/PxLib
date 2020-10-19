@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7bb7821f24f9774abb0c7cb53d019f3, type: 3}
+  m_Name: DefaultButtonStyle
+  m_EditorClassIdentifier: 
+  up: {fileID: -1260776800549914198, guid: bd5ea0028e65e7144b0f4446e62d1bb4, type: 3}
+  hover: {fileID: -1778453245492326318, guid: bd5ea0028e65e7144b0f4446e62d1bb4, type: 3}
+  down: {fileID: -2151038670374999065, guid: bd5ea0028e65e7144b0f4446e62d1bb4, type: 3}
+  disabled: {fileID: 6479090106659499547, guid: bd5ea0028e65e7144b0f4446e62d1bb4,
+    type: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QuestionnaireModule : UIModule
 {
-    public UIPanel panel;
+    public UIWindow window;
     public UIText text;
     public Grid<UIButton> answers;
 

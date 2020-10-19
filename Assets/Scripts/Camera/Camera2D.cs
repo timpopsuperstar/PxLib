@@ -4,120 +4,70 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Xml.Schema;
+using TMPro;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Camera2D : MonoBehaviour, IBounds
+//Pixel Perfect Camera to be extended
+public class Camera2D : MonoBehaviour
 {
-    //IBounds
-    public Transform Transform { get { return transform; } }
-    public Bounds Bounds
+    public delegate void OnCameraMoveAction(Vector2 v);
+    public event OnCameraMoveAction OnCameraMove;
+
+    public Camera Camera { get; private set; }
+    public Bounds WindowBounds
+    {
+        get => new Bounds(transform.position, new Vector2((int)Screen.width, (int)Screen.height));        
+    }
+    public Bounds PixelBounds
     {
         get
         {
-            var dimensions = new Vector2(Screen.width / ZoomLevel, Screen.height / ZoomLevel);
-            var center = transform.position;
-            var bounds = new Bounds(center, dimensions);
-            return bounds;
-        }
-    }
-    public Bounds SafeZone
-    {
-        get
-        {
-            return new Bounds(Bounds.center, Bounds.size * .9f);
+            float halfHeight = Camera.orthographicSize;
+            float halfWidth = Camera.aspect * halfHeight;
+            var height = halfHeight * 2;
+            var width = halfWidth * 2;
+            return new Bounds((Vector2)transform.position, new Vector2(width, height));
         }
     }
 
-    event EventHandler PositionChangedEvent;
-    event EventHandler SizeChangedEvent;
-
-    event EventHandler IBounds.PositionChanged
-    {
-        add
-        {
-            PositionChangedEvent += value;
-        }
-        remove
-        {
-            PositionChangedEvent -= value;
-        }
-    }
-    event EventHandler IBounds.SizeChanged
-    {
-        add
-        {
-            SizeChangedEvent += value;
-        }
-        remove
-        {
-            SizeChangedEvent -= value;
-        }
-    }
-
-    //Public Properties
-    public static int ZoomLevel { get { return 5; } }
-
-    private Vector3 _previousPosition;
-    public Vector3 PreviousPosition { get { return _previousPosition; }set { _previousPosition = value; } }
-
-    public Vector3 Position 
-    { 
-        get 
-        { 
-            return transform.position; 
-        }
-        set
-        {
-            _previousPosition = transform.position;
-            transform.position = value;
-            OnMove?.Invoke(transform.position);
-        }
-    }
-
-    private Camera _camera;
-    public Camera Camera { get { return _camera; } }
-    
-    //Singleton
     public static Camera2D instance;
+
+    private Vector2 _previousPosition;
+    private Vector2 _currentPosition;
 
     private void Awake()
     {
-
-        #region singleton
         if (instance == null)
         {
             instance = this;
         }
         else
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
-        #endregion
-        _camera = GetComponent<Camera>();
-
+        InitCamera();
     }
-
-    private void Start()
-    {
-        SetOrthographicSize();
-    }
-
     private void Update()
     {
+        _currentPosition = transform.position;
+        if(_currentPosition != _previousPosition)
+        {
+            OnCameraMove?.Invoke(_currentPosition);
+        }
+        _previousPosition = _currentPosition;
+    }    
+    private void InitCamera()
+    {
+        Camera = GetComponent<Camera>();
         SetOrthographicSize();
-    }        
-
+    }
     private void SetOrthographicSize()
     {
-        Camera.orthographicSize = (Screen.height / 2) / ZoomLevel;
+        Camera.orthographicSize = Screen.height / 2 / GameSettings.zoomLevel;
     }
 
-    public void MoveCamera(Vector2 newPos)
-    {
-        transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
-    }
 }
 
 

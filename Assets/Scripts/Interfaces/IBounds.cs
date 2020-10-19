@@ -9,7 +9,7 @@ public interface IBounds
    Bounds SafeZone { get; }
    Transform Transform { get; }
 
-    public event EventHandler PositionChanged;
+    //public event EventHandler PositionChanged;
     event EventHandler SizeChanged;
 }
 

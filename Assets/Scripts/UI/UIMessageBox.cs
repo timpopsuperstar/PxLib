@@ -23,6 +23,7 @@ public class UIMessageBox : MonoBehaviour
             toPrint = s.Substring(0, i);
             text.text = toPrint;
             yield return new WaitForSeconds(.02f);
-        }        
+        }
+        //toPrint = s.Substring(0, i) + "<color=#00000000>" + s.Substring(i);
     }
 }

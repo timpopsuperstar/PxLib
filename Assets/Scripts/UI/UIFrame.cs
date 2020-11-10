@@ -6,22 +6,29 @@ using UnityEngine;
 using NaughtyAttributes;
 using System.Runtime.CompilerServices;
 using TMPro;
-
+using UnityEngine.UI;
 
 public class UIFrame : MonoBehaviour
 {
     //Public Properties
     public virtual Bounds Bounds
     {
-        get => _bounds;
+        get => new Bounds(transform.localPosition, _size);
         set
         {
-            _bounds.center = value.center.ToInt();
-            _bounds.size = value.size.ToInt();         
-            transform.position = _bounds.center;
-            SetFrameAlignment();
-            OnSizeChanged();
-            OnPositionChanged();
+            _previousPosition = Bounds.center;
+            _previousSize = Bounds.size;
+            transform.localPosition = value.center.ToInt();
+            
+            _size = value.size.ToInt();
+            if(_previousPosition != (Vector2)Bounds.center)
+            {
+                OnPositionChanged();
+            }
+            if(_previousSize != (Vector2)Bounds.size)
+            {
+                OnSizeChanged();
+            } 
         }
     }
     public Alignment FrameAlignment
@@ -32,7 +39,7 @@ public class UIFrame : MonoBehaviour
             if (_anchor)
             {                
                 _frameAlignment = value;
-                SetFrameAlignment();
+                UpdateAlignment();
             }
             else
             {
@@ -45,7 +52,7 @@ public class UIFrame : MonoBehaviour
         get => _anchor;
         set
         {
-            AnchorToFrame(value, FrameAlignment);
+            SetAnchor(value, FrameAlignment);
         }
     }
     public virtual Vector2 Position
@@ -65,90 +72,108 @@ public class UIFrame : MonoBehaviour
         }
     }
 
+    //Editor Fields
+    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnBoundsPropertyChangedCallback")] protected Vector2 _size;
+    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnParentChangedCallback")] protected UIFrame _anchor;
+    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnBoundsPropertyChangedCallback")] [ShowIf("HasParent")] private Alignment _frameAlignment;
+    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnBoundsPropertyChangedCallback")] [ShowIf("HasParent")] private bool _useSafeZone;
+    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnBoundsPropertyChangedCallback")] [ShowIf("HasParent")] protected bool _sizeToAnchor;
+
     //Private Fields
-    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnParentChangedEditorCallback")] private UIFrame _anchor;
-    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnSizeToAnchorChangedEditorCallback")] [ShowIf("HasParent")] private bool _sizeToAnchor;
-    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnSafeZoneChangedEditorCallback")] [ShowIf("HasParent")] private bool _useSafeZone;
-    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnAlignmentChangedEditorCallback")] [ShowIf("HasParent")] private Alignment _frameAlignment;
-    [BoxGroup("Frame")] [SerializeField] [OnValueChanged("OnBoundsChangedEditorCallback")] private Bounds _bounds;
+    private List<UIFrame> _childrenFrames;
+    private Vector2 _previousPosition;
+    private Vector2 _previousSize;
 
-
-    //Anchor Methods
-    public void AnchorToFrame(UIFrame parent, Alignment alignment = Alignment.None)
+    //Public Methods
+    public void SetAnchor(UIFrame parent, Alignment alignment = Alignment.None)
     {
-        transform.parent = parent.transform;
+        if (_anchor)
+        {
+            _anchor.RemoveChild(this);
+        }
+        transform.SetParent(parent.transform);
+        //transform.parent = parent.transform;
         _frameAlignment = alignment;
-        _anchor = parent;
-        SetFrameAlignment();
+        _anchor = parent;        
+        parent.AddChild(this);
+        RenderBounds();
     }
-    protected void SetFrameAlignment()
+    public void ReleaseAnchor()
+    {
+        if (_anchor)
+        {
+            _anchor.RemoveChild(this);
+            transform.SetParent(null);
+            _anchor = null;
+            RenderBounds();
+        }
+    }   
+    //Callbacks
+    protected virtual void OnSizeChanged() { }
+    protected virtual void OnPositionChanged() { }
+    protected virtual void OnRenderBounds() { }
+
+    //Private Methods
+    private void RenderBounds()
+    {
+        UpdateAlignment();
+        UpdateSize();
+        OnRenderBounds();
+    }
+    private void UpdateAlignment()
     {
         if (Anchor && FrameAlignment != Alignment.None)
         {
-            transform.localPosition = Align.ToBounds(Bounds, _useSafeZone? Anchor.Bounds.ToSafeZone() : Anchor.Bounds, FrameAlignment).ToInt();
+            var newPos = Align.ToBounds(Bounds, _useSafeZone ? Anchor.Bounds.ToSafeZone() : Anchor.Bounds, FrameAlignment).ToInt();
+            Bounds = new Bounds(newPos, Bounds.size);
         }
     }
-    public void SizeToAnchor()
+    private void UpdateSize()
     {
-        if (Anchor)
+        if (Anchor && _sizeToAnchor)
         {
-            Bounds = new Bounds(Bounds.center, _useSafeZone? Anchor.Bounds.ToSafeZone().size : Anchor.Bounds.size);
-            Debug.Log(Bounds);
-            Debug.Log(Anchor.Bounds.ToSafeZone().size);
-            Debug.Log(Anchor.Bounds.size);
+            Bounds = new Bounds(Bounds.center, _useSafeZone ? Anchor.Bounds.ToSafeZone().size : Anchor.Bounds.size);
         }
     }
-    //Callbacks
-    public virtual void OnSizeChanged()
+    private void AddChild(UIFrame child)
     {
-
+        _childrenFrames.Add(child);
     }
-    public virtual void OnPositionChanged()
+    private void RemoveChild(UIFrame child)
     {
-
+        _childrenFrames.Remove(child);
+        child.RenderBounds();
+    }
+    private void RemoveChildren()
+    {
+        var childrenToRemove = _childrenFrames;
+        for(int i = 0; i < childrenToRemove.Count; i++)
+        {
+            RemoveChild(childrenToRemove[i]);
+        }
     }
 
     //Editor Methods
-    public void OnDrawGizmos()
+    protected virtual void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
-        Gizmos.DrawWireCube(transform.position, _bounds.size);
+        Gizmos.DrawWireCube(transform.position, Bounds.size);
     }
-    public void OnParentChangedEditorCallback()
+    protected void OnParentChangedCallback()
     {
         if (Anchor)
         {
-            AnchorToFrame(Anchor, FrameAlignment);
+            SetAnchor(Anchor, FrameAlignment);
         }
         else
         {
             transform.parent = null;
         }           
     }
-    public bool HasParent => Anchor;
-    public void OnAlignmentChangedEditorCallback()
+    private bool HasParent => Anchor;
+    protected void OnBoundsPropertyChangedCallback()
     {
-        SetFrameAlignment();
-    }
-    public void OnSizeToAnchorChangedEditorCallback() => SizeToAnchor();
-
-    public void OnSafeZoneChangedEditorCallback()
-    {
-        SetFrameAlignment();
-        if (_sizeToAnchor)
-        {
-            SizeToAnchor();
-            
-        }
-    }
-    public void OnBoundsChangedEditorCallback()
-    {
-        Bounds = new Bounds(Bounds.center.ToInt(), Bounds.size.ToInt());
-        SetFrameAlignment();
-        if (_sizeToAnchor)
-        {
-            SizeToAnchor();
-        }
-        OnSizeChanged();
+        _size = _size.ToInt();
+        RenderBounds();
     }
 }

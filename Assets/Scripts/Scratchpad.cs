@@ -6,7 +6,12 @@ using System.Security.Policy;
 
 public class Scratchpad : MonoBehaviour
 {
-    [SerializeField] private InputActions _inputActions;
+
+    [SerializeField] private UIScene _questionnaireScene;
+    [SerializeField] public InputActions _inputActions;
+
+    private UIScene _questionnaireSceneInstance;
+
 
     public static Scratchpad instance;
 
@@ -15,7 +20,13 @@ public class Scratchpad : MonoBehaviour
         instance = this;
     }
     private void Start()
-    {        
-        
+    {
+        _questionnaireSceneInstance = Instantiate(_questionnaireScene);
+        _questionnaireSceneInstance.Load(_inputActions);
+        var a = new Vector2(0, 0);
+        var b = new Vector2(10, 10);
+        var c = new Vector2(30, 30);
+        var d = new Vector2(60, 60);
+
     }
 }

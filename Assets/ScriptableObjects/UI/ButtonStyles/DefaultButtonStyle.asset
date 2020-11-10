@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bb7821f24f9774abb0c7cb53d019f3, type: 3}
+  m_Script: {fileID: 11500000, guid: f7e349438ffd83940b18d68584d9d8bc, type: 3}
   m_Name: DefaultButtonStyle
   m_EditorClassIdentifier: 
   up: {fileID: -1260776800549914198, guid: bd5ea0028e65e7144b0f4446e62d1bb4, type: 3}

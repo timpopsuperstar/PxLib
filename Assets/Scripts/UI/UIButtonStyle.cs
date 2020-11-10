@@ -1,18 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
-public class UIButtonStyles : MonoBehaviour
+[CreateAssetMenu(menuName = "ScriptableObjects/UI/ButtonStyle")]
+public class UIButtonStyle :ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [BoxGroup("Button States")] public Sprite up;
+    [BoxGroup("Button States")] public Sprite hover;
+    [BoxGroup("Button States")] public Sprite down;
+    [BoxGroup("Button States")] public Sprite disabled;
 }

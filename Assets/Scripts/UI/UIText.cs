@@ -18,7 +18,7 @@ public class UIText : UIFrame
     public TextMeshPro Text => _text;
 
     //Editor fields
-    [SerializeField] private PxFont _fontStyle;
+    [BoxGroup("Text")] [SerializeField] [OnValueChanged("OnFontStyleChangedCallback")] private PxFont _fontStyle;
 
     //Private fields    
     private TextMeshPro _text;
@@ -32,7 +32,6 @@ public class UIText : UIFrame
     }
     private void Update()
     {
-        InitializeText();
     }
 
     //Public methods
@@ -45,6 +44,9 @@ public class UIText : UIFrame
     {
         StartCoroutine(IEPrintText(s, printSpeed));
     }
+
+    //Protected methods
+    protected void SetSortingOrder() => _renderer.sortingOrder = transform.hierarchyCount;
 
     //Private methods
     private void GetComponentReferences()
@@ -67,7 +69,6 @@ public class UIText : UIFrame
     private void InitializeText()
     {
         SetSortingOrder();
-        SetFrameAlignment();
         switch (_fontStyle)
         {
             case PxFont.Softsquare:
@@ -76,13 +77,25 @@ public class UIText : UIFrame
         }            
     }
 
-    //Protected methods
-    protected void SetSortingOrder() => _renderer.sortingOrder = transform.hierarchyCount;
-
     //Callbacks
-    public override void OnSizeChanged()
+    protected override void OnSizeChanged()
     {
         _transform.sizeDelta = Bounds.size;
+    }
+    protected override void OnRenderBounds()
+    {
+        _transform.sizeDelta = Bounds.size;
+    }
+
+    //Editor methods
+    protected void OnFontStyleChangedCallback()
+    {
+        switch (_fontStyle)
+        {
+            case PxFont.Softsquare:                
+                InitSoftsquareFont(Text);
+                break;
+        }
     }
 
     //Static Methods
@@ -93,8 +106,4 @@ public class UIText : UIFrame
         t.GetComponent<MeshRenderer>().sortingLayerName = "UI";
         t.sortingOrder = t.transform.hierarchyCount;
     }
-
-    //Editor Methods
-    
-
 }

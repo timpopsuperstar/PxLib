@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] UIModule _testModule;
 
     private UIMainFrame _mainCanvas;
-    private List<UIComposition> _loadedCompositions;
+    private List<UIScene> _loadedUiScenes;
     private InputActions _inputActions;
 
     //Monobehaviour methods
@@ -42,9 +42,9 @@ public class UIManager : MonoBehaviour
     }
 
     //Public Methods
-    public void LoadComposition(UIComposition composition)
+    public void LoadUiScene(UIScene composition)
     {
-        _loadedCompositions.Add(composition);
+        _loadedUiScenes.Add(Instantiate(composition));        
     }
 
     //Private Methods

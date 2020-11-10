@@ -6,6 +6,6 @@ namespace PxUISettings
 {   
     public static class UISettings
     {
-        public const float defaultPrintSpeed = .01f;
+        public const float defaultPrintSpeed = .005f;
     }
 }

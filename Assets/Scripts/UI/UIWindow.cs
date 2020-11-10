@@ -24,47 +24,42 @@ public class UIWindow : UIFrame
         set
         {
             _spriteRenderer.sprite = value;
-            _sprite = value;
         }
     }
+
     [BoxGroup("Window")] [SerializeField] [OnValueChanged("OnDrawChangedCallback")] private bool _draw;
-    private Sprite _sprite;
     private SpriteRenderer _spriteRenderer;
 
-    //Draw Methods
-    private void InitSpriteRenderer()
-    {
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        Sprite = _spriteRenderer.sprite;
-        _spriteRenderer.drawMode = SpriteDrawMode.Sliced;
-        _spriteRenderer.sortingLayerName = "UI";
-        _spriteRenderer.sortingOrder = transform.hierarchyCount;
-        _spriteRenderer.enabled = _draw;
-        OnSpriteRendererInit();
-    }
-
     //Monobehaviour Methods
-    public virtual void Awake()
+    protected virtual void Awake()
     {
         InitSpriteRenderer();
     }
-    public virtual void Update()
+
+    private void InitSpriteRenderer()
     {
-    }
-    public void OnDestroy()
-    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer.SetUIWindowProperties();
+        _spriteRenderer.enabled = _draw;
+        OnSpriteRendererInit();
     }
     //Callbacks
-    public override void OnSizeChanged()
+    protected override void OnSizeChanged()
     {
         _spriteRenderer.size = Size;
     }
-    protected virtual void OnSpriteRendererInit()
+    protected override void OnRenderBounds()
     {
-
+        _spriteRenderer.size = Size;
     }
+    protected virtual void OnSpriteRendererInit() { }
+
     //Editor Methods
+    protected override void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireCube(Bounds.center, Bounds.size);
+    }
     public void OnDrawChangedCallback()
     {
         _spriteRenderer.enabled = _draw;

@@ -1,49 +1,51 @@
-﻿using System.Collections;
+﻿using NaughtyAttributes.Test;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InputActions : MonoBehaviour
 {
-    //Properties
     public enum ButtonState { Default, Started, Performed, Canceled}
-    ButtonState leftMouseButton;
-    ButtonState rightMouseButton;
-    float mouseScroll;
-
+    
     public ButtonState LeftMouseButton
     {
         get
         {
-            return leftMouseButton;
+            return _leftMouseButton;
         }
         private set
         {
-            leftMouseButton = value;
+            _leftMouseButton = value;
         }
     }
     public ButtonState RightMouseButton
     {
         get
         {
-            return rightMouseButton;
+            return _rightMouseButton;
         }
         private set
         {
-            rightMouseButton = value;
+            _rightMouseButton = value;
         }
     }
     public float MouseScroll
     {
         get
         {
-            return mouseScroll;
+            return _mouseScroll;
         }
         private set
         {
-            mouseScroll = value;
+            _mouseScroll = value;
         }
     }
+
+    //Mouse Properties
+    private ButtonState _leftMouseButton;
+    private ButtonState _rightMouseButton;
+    private float _mouseScroll;
 
     //Input Actions
     InputAction moveAction = new InputAction("move");
@@ -66,8 +68,9 @@ public class InputActions : MonoBehaviour
     public delegate void OnSpecialAction();
     public event OnSpecialAction OnSpecial;
 
-    public delegate void OnPointerPositionAction(Vector2 v);
-    public event OnPointerPositionAction OnPointerPosition;
+    //public delegate void OnPointerPositionAction(Vector2 v);
+    //public event OnPointerPositionAction OnPointerPosition;
+    public event System.Action<Vector2> OnPointerPosition;
     public delegate void OnMouseLeftClickAction(Vector2 v);
     public event OnMouseLeftClickAction OnMouseLeftClick;
     public delegate void OnMouseRightClickAction();
@@ -75,14 +78,57 @@ public class InputActions : MonoBehaviour
     public delegate void OnMouseScrollAction();
     public event OnMouseScrollAction OnMouseScroll;
 
-    void Start()
+    private void Start()
     {     
         AddKeyboardBindings();
         AddGamepadBindings();
 
         EnableInputActions();
     }
-    void Update()
+    private void Update()
+    {
+        CaptureControllerInput();
+        CaptureMouseInput();
+    }
+
+    private void CaptureMouseInput()
+    {
+        var mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        OnPointerPosition?.Invoke(mousePosition);
+
+        if (Mouse.current.leftButton.isPressed)
+        {
+            if (_leftMouseButton != ButtonState.Started)
+            {
+                //Debug.Log("starting");
+                _leftMouseButton = ButtonState.Started;
+            }
+        }
+        else
+        {
+            switch (_leftMouseButton)
+            {
+                case ButtonState.Default:
+                    break;
+                case ButtonState.Started:
+                    _leftMouseButton = ButtonState.Performed;
+                    break;
+                case ButtonState.Performed:
+                    _leftMouseButton = ButtonState.Canceled;
+                    break;
+                case ButtonState.Canceled:
+                    _leftMouseButton = ButtonState.Default;
+                    break;
+            }
+        }
+
+        if (_leftMouseButton == ButtonState.Canceled)
+        {
+            OnMouseLeftClick?.Invoke(mousePosition);
+            //Debug.Log("executed mouse click");
+        }
+    }
+    private void CaptureControllerInput()
     {
         var movement = moveAction.ReadValue<Vector2>();
         OnMove?.Invoke(movement);
@@ -100,44 +146,7 @@ public class InputActions : MonoBehaviour
             OnSpecial?.Invoke();
         }
 
-        //MouseStuff
-        var mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        OnPointerPosition?.Invoke(mousePosition);
-
-        if (Mouse.current.leftButton.isPressed)
-        {
-            if(leftMouseButton != ButtonState.Started)
-            {
-                Debug.Log("starting");
-                leftMouseButton = ButtonState.Started;
-            }
-        }
-        else
-        {
-            switch (leftMouseButton)
-            {
-                case ButtonState.Default:
-                    break;
-                case ButtonState.Started:
-                    leftMouseButton = ButtonState.Performed;
-                    break;
-                case ButtonState.Performed:
-                    leftMouseButton = ButtonState.Canceled;
-                    break;
-                case ButtonState.Canceled:
-                    leftMouseButton = ButtonState.Default;
-                    break;
-            }
-        }
-
-        if (leftMouseButton == ButtonState.Canceled)
-        {
-            OnMouseLeftClick?.Invoke(mousePosition);
-            Debug.Log("executed mouse click");
-        }
     }
-
-
 
     private void AddKeyboardBindings()
     {

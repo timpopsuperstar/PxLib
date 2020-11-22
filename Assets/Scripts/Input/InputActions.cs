@@ -41,6 +41,10 @@ public class InputActions : MonoBehaviour
             _mouseScroll = value;
         }
     }
+    public float LastTimeMovementZeroed => _lastTimeMovementZeroed;
+
+    //Movement Properties
+    private float _lastTimeMovementZeroed;
 
     //Mouse Properties
     private ButtonState _leftMouseButton;
@@ -58,25 +62,18 @@ public class InputActions : MonoBehaviour
     InputAction mouseRightClickAction = new InputAction("mouseRightClick");
     InputAction mouseScrollAction = new InputAction("mouseScroll");
 
-    //Delegates
-    public delegate void OnMoveAction(Vector2 v);
-    public event OnMoveAction OnMove;
-    public delegate void OnConfirmAction();
-    public event OnConfirmAction OnConfirm;
-    public delegate void OnCancelAction();
-    public event OnCancelAction OnCancel;
-    public delegate void OnSpecialAction();
-    public event OnSpecialAction OnSpecial;
 
-    //public delegate void OnPointerPositionAction(Vector2 v);
-    //public event OnPointerPositionAction OnPointerPosition;
+    //Events
+    public event System.Action<Vector2> OnMove;
+    public event System.Action OnConfirm;
+    public event System.Action OnConfirmRelease;
+    public event System.Action OnCancel;
+    public event System.Action OnSpecial;
+
     public event System.Action<Vector2> OnPointerPosition;
-    public delegate void OnMouseLeftClickAction(Vector2 v);
-    public event OnMouseLeftClickAction OnMouseLeftClick;
-    public delegate void OnMouseRightClickAction();
-    public event OnMouseRightClickAction OnMouseRightClick;
-    public delegate void OnMouseScrollAction();
-    public event OnMouseScrollAction OnMouseScroll;
+    public event System.Action<Vector2> OnMouseLeftClick;
+    public event System.Action OnMouseRightClick;
+    public event System.Action OnMouseScroll;
 
     private void Start()
     {     
@@ -100,7 +97,6 @@ public class InputActions : MonoBehaviour
         {
             if (_leftMouseButton != ButtonState.Started)
             {
-                //Debug.Log("starting");
                 _leftMouseButton = ButtonState.Started;
             }
         }
@@ -125,12 +121,15 @@ public class InputActions : MonoBehaviour
         if (_leftMouseButton == ButtonState.Canceled)
         {
             OnMouseLeftClick?.Invoke(mousePosition);
-            //Debug.Log("executed mouse click");
         }
     }
     private void CaptureControllerInput()
     {
-        var movement = moveAction.ReadValue<Vector2>();
+        Vector2 movement = moveAction.ReadValue<Vector2>();
+        if(movement == Vector2.zero)
+        {
+            _lastTimeMovementZeroed = Time.time;
+        }
         OnMove?.Invoke(movement);
 
         if (confirmAction.triggered)
@@ -147,7 +146,6 @@ public class InputActions : MonoBehaviour
         }
 
     }
-
     private void AddKeyboardBindings()
     {
         moveAction.AddCompositeBinding("Dpad")

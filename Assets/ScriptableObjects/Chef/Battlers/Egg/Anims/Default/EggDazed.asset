@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecc03c6f69774b4e8719055d158b343, type: 3}
+  m_Name: EggDazed
+  m_EditorClassIdentifier: 
+  _frameRate: 12
+  _loop: 0
+  _frames:
+  - {fileID: -6666041645560478400, guid: adb23ea84848a384bae0c78dea0b84d7, type: 3}
+  - {fileID: 6528791694637979960, guid: adb23ea84848a384bae0c78dea0b84d7, type: 3}
+  _sfx: {fileID: 0}

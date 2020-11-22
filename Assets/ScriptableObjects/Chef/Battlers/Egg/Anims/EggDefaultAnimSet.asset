@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae7e2056379fc940819479533eafcce, type: 3}
+  m_Name: EggDefaultAnimSet
+  m_EditorClassIdentifier: 
+  _sprites: []
+  idle: {fileID: 11400000, guid: ea00a79dd76551f4e95b24c50fc47eee, type: 2}
+  damaged: {fileID: 11400000, guid: 4a50a9483b4898949895d57aead28ca8, type: 2}
+  dead: {fileID: 11400000, guid: 9e2f8f29cb411dd498eda972de52ae8e, type: 2}
+  dodgeVertical: {fileID: 11400000, guid: 68ca35d71f5a72c42b8433a9e135299e, type: 2}
+  dodgeLeft: {fileID: 11400000, guid: f86b562959df7ab46b4f1388122fd634, type: 2}
+  dodgeRight: {fileID: 11400000, guid: 833e87721171cd048ab0dc999a25fab4, type: 2}
+  dazed: {fileID: 11400000, guid: a24fdbabc96bb1d4092d973e0be2ded8, type: 2}

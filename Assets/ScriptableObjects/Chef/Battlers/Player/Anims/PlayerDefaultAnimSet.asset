@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae7e2056379fc940819479533eafcce, type: 3}
+  m_Name: PlayerDefaultAnimSet
+  m_EditorClassIdentifier: 
+  _sprites: []
+  idle: {fileID: 11400000, guid: 60878a5a3d71b724a90444b48c9c1836, type: 2}
+  damaged: {fileID: 11400000, guid: 145723c2d481e7e41bc92d009dfeb446, type: 2}
+  dead: {fileID: 11400000, guid: 7217540ec54bf0442b3447e29310e295, type: 2}
+  dodgeVertical: {fileID: 11400000, guid: c9506efada7f90644852f507f763bb7c, type: 2}
+  dodgeLeft: {fileID: 11400000, guid: fc88f670a69f2184393a7c99d9d8f89d, type: 2}
+  dodgeRight: {fileID: 11400000, guid: 45eefe66c2803ed4fada679daf8cab21, type: 2}

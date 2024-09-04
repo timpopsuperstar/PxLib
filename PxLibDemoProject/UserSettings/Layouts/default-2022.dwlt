@@ -1,0 +1,2364 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: -1912
+    y: 405
+    width: 1904
+    height: 973
+  m_ShowMode: 4
+  m_Title: Project
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 0
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  - {fileID: 5}
+  - {fileID: 4}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1904
+    height: 973
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 30
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1904
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 953
+    width: 1904
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1904
+    height: 923
+  m_MinSize: {x: 300, y: 100}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 73
+  draggingID: 0
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 714
+    height: 923
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 39
+  draggingID: 0
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 9}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 714
+    height: 641
+  m_MinSize: {x: 200, y: 50}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 40
+  draggingID: 0
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 258
+    height: 641
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 15}
+  - {fileID: 16}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: InspectorWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 258
+    y: 0
+    width: 456
+    height: 641
+  m_MinSize: {x: 277, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 641
+    width: 714
+    height: 282
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 12}
+  - {fileID: 13}
+  m_Position:
+    serializedVersion: 2
+    x: 714
+    y: 0
+    width: 1190
+    height: 923
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 8096, y: 16192}
+  vertical: 1
+  controlID: 74
+  draggingID: 0
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: GameView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1190
+    height: 590
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 19}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 590
+    width: 1190
+    height: 333
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 20}
+  m_Panes:
+  - {fileID: 20}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: -1198
+    y: 435
+    width: 1189
+    height: 569
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1189, y: 548}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 1
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -594.5
+    m_HBaseRangeMax: 594.5
+    m_VBaseRangeMin: -274
+    m_VBaseRangeMax: 274
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 1
+    m_VSlider: 1
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1189
+      height: 548
+    m_Scale: {x: 4, y: 4}
+    m_Translation: {x: 489.44925, y: 137.26888}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -122.36231
+      y: -34.31722
+      width: 297.25
+      height: 137
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1189, y: 569}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1
+    y: 81
+    width: 523
+    height: 753
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_Spl:
+    ID: 3582
+    splitterInitialOffset: 600
+    currentActiveSplitter: -1
+    realSizes:
+    - 543
+    - 140
+    relativeSizes:
+    - 0.7946027
+    - 0.20539731
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 683
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 15}
+    m_NewResultList:
+    - id: 1273
+      uniqueId: '[DungeonCrawl2024][suite]'
+      name: DungeonCrawl2024
+      fullName: DungeonCrawl2024
+      resultStatus: 1
+      duration: 0.0348591
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1307
+      uniqueId: '[Org.OpenAPITools.Test.dll][suite]'
+      name: Org.OpenAPITools.Test.dll
+      fullName: F:/source/Game-Dev/DungeonCrawl2024/Library/ScriptAssemblies/Org.OpenAPITools.Test.dll
+      resultStatus: 1
+      duration: 0.0275519
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1273
+      parentUniqueId: '[DungeonCrawl2024][suite]'
+    - id: 1308
+      uniqueId: Org.OpenAPITools.Test.dll/[Org][suite]
+      name: Org
+      fullName: Org
+      resultStatus: 1
+      duration: 0.0260249
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1307
+      parentUniqueId: '[Org.OpenAPITools.Test.dll][suite]'
+    - id: 1309
+      uniqueId: Org.OpenAPITools.Test.dll/Org/[OpenAPITools][suite]
+      name: OpenAPITools
+      fullName: Org.OpenAPITools
+      resultStatus: 1
+      duration: 0.024838
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1308
+      parentUniqueId: Org.OpenAPITools.Test.dll/[Org][suite]
+    - id: 1310
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/[Test][suite]
+      name: Test
+      fullName: Org.OpenAPITools.Test
+      resultStatus: 1
+      duration: 0.0236932
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1309
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/[OpenAPITools][suite]
+    - id: 1312
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api][suite]
+      name: Api
+      fullName: Org.OpenAPITools.Test.Api
+      resultStatus: 1
+      duration: 0.0223087
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1310
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/[Test][suite]
+    - id: 1299
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests][suite]
+      name: LeaderboardroutesApiTests
+      fullName: Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests
+      resultStatus: 1
+      duration: 0.020514
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1312
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api][suite]
+    - id: 1302
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/LeaderboardroutesApiTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.CreateGameEntryTest]
+      name: CreateGameEntryTest
+      fullName: Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.CreateGameEntryTest
+      resultStatus: 1
+      duration: 0.0041663
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1299
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests][suite]
+    - id: 1301
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/LeaderboardroutesApiTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.CreateGameTest]
+      name: CreateGameTest
+      fullName: Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.CreateGameTest
+      resultStatus: 1
+      duration: 0.0001871
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1299
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests][suite]
+    - id: 1304
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/LeaderboardroutesApiTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.GetGameEntriesTest]
+      name: GetGameEntriesTest
+      fullName: Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.GetGameEntriesTest
+      resultStatus: 1
+      duration: 0.0001136
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1299
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests][suite]
+    - id: 1305
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/LeaderboardroutesApiTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.GetGamesTest]
+      name: GetGamesTest
+      fullName: Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.GetGamesTest
+      resultStatus: 1
+      duration: 0.000098
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1299
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests][suite]
+    - id: 1303
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/LeaderboardroutesApiTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.GetGameTest]
+      name: GetGameTest
+      fullName: Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.GetGameTest
+      resultStatus: 1
+      duration: 0.0000974
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1299
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests][suite]
+    - id: 1306
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/LeaderboardroutesApiTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.GetUserGameEntryTest]
+      name: GetUserGameEntryTest
+      fullName: Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.GetUserGameEntryTest
+      resultStatus: 1
+      duration: 0.0000907
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1299
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests][suite]
+    - id: 1300
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/LeaderboardroutesApiTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.InstanceTest]
+      name: InstanceTest
+      fullName: Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests.InstanceTest
+      resultStatus: 1
+      duration: 0.0001036
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1299
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Api/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Api.LeaderboardroutesApiTests][suite]
+    - id: 1311
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model][suite]
+      name: Model
+      fullName: Org.OpenAPITools.Test.Model
+      resultStatus: 1
+      duration: 0.025669
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1310
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/[Test][suite]
+    - id: 1274
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameNewTests][suite]
+      name: GameNewTests
+      fullName: Org.OpenAPITools.Test.Model.GameNewTests
+      resultStatus: 1
+      duration: 0.0031351
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1311
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model][suite]
+    - id: 1276
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/GameNewTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameNewTests.DescriptionTest]
+      name: DescriptionTest
+      fullName: Org.OpenAPITools.Test.Model.GameNewTests.DescriptionTest
+      resultStatus: 1
+      duration: 0.0002259
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1274
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameNewTests][suite]
+    - id: 1275
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/GameNewTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameNewTests.GameNewInstanceTest]
+      name: GameNewInstanceTest
+      fullName: Org.OpenAPITools.Test.Model.GameNewTests.GameNewInstanceTest
+      resultStatus: 1
+      duration: 0.000132
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1274
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameNewTests][suite]
+    - id: 1277
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/GameNewTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameNewTests.ScoreSortModeTest]
+      name: ScoreSortModeTest
+      fullName: Org.OpenAPITools.Test.Model.GameNewTests.ScoreSortModeTest
+      resultStatus: 1
+      duration: 0.0001306
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1274
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameNewTests][suite]
+    - id: 1278
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameScoreSortModeTests][suite]
+      name: GameScoreSortModeTests
+      fullName: Org.OpenAPITools.Test.Model.GameScoreSortModeTests
+      resultStatus: 1
+      duration: 0.0028404
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1311
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model][suite]
+    - id: 1279
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/GameScoreSortModeTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameScoreSortModeTests.GameScoreSortModeInstanceTest]
+      name: GameScoreSortModeInstanceTest
+      fullName: Org.OpenAPITools.Test.Model.GameScoreSortModeTests.GameScoreSortModeInstanceTest
+      resultStatus: 1
+      duration: 0.0004859
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1278
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameScoreSortModeTests][suite]
+    - id: 1280
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameTests][suite]
+      name: GameTests
+      fullName: Org.OpenAPITools.Test.Model.GameTests
+      resultStatus: 1
+      duration: 0.0083185
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1311
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model][suite]
+    - id: 1282
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/GameTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameTests.DescriptionTest]
+      name: DescriptionTest
+      fullName: Org.OpenAPITools.Test.Model.GameTests.DescriptionTest
+      resultStatus: 1
+      duration: 0.0002312
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1280
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameTests][suite]
+    - id: 1281
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/GameTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameTests.GameInstanceTest]
+      name: GameInstanceTest
+      fullName: Org.OpenAPITools.Test.Model.GameTests.GameInstanceTest
+      resultStatus: 1
+      duration: 0.0001347
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1280
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameTests][suite]
+    - id: 1283
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/GameTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameTests.IdTest]
+      name: IdTest
+      fullName: Org.OpenAPITools.Test.Model.GameTests.IdTest
+      resultStatus: 1
+      duration: 0.0001318
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1280
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameTests][suite]
+    - id: 1284
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/GameTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameTests.ScoreSortModeTest]
+      name: ScoreSortModeTest
+      fullName: Org.OpenAPITools.Test.Model.GameTests.ScoreSortModeTest
+      resultStatus: 1
+      duration: 0.0001284
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1280
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.GameTests][suite]
+    - id: 1285
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests][suite]
+      name: LeaderboardEntryNewTests
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests
+      resultStatus: 1
+      duration: 0.0049595
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1311
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model][suite]
+    - id: 1287
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryNewTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.FreeDataTest]
+      name: FreeDataTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.FreeDataTest
+      resultStatus: 1
+      duration: 0.0002263
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1285
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests][suite]
+    - id: 1286
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryNewTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.LeaderboardEntryNewInstanceTest]
+      name: LeaderboardEntryNewInstanceTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.LeaderboardEntryNewInstanceTest
+      resultStatus: 1
+      duration: 0.0000983
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1285
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests][suite]
+    - id: 1288
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryNewTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.ScoreTest]
+      name: ScoreTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.ScoreTest
+      resultStatus: 1
+      duration: 0.0000858
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1285
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests][suite]
+    - id: 1289
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryNewTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.UserIdTest]
+      name: UserIdTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.UserIdTest
+      resultStatus: 1
+      duration: 0.0000874
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1285
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests][suite]
+    - id: 1290
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryNewTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.UserNameTest]
+      name: UserNameTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests.UserNameTest
+      resultStatus: 1
+      duration: 0.0000834
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1285
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryNewTests][suite]
+    - id: 1291
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests][suite]
+      name: LeaderboardEntryTests
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryTests
+      resultStatus: 1
+      duration: 0.0039458
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1311
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model][suite]
+    - id: 1293
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests.FreeDataTest]
+      name: FreeDataTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryTests.FreeDataTest
+      resultStatus: 1
+      duration: 0.0001089
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1291
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests][suite]
+    - id: 1294
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests.GameIdTest]
+      name: GameIdTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryTests.GameIdTest
+      resultStatus: 1
+      duration: 0.0000865
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1291
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests][suite]
+    - id: 1295
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests.IdTest]
+      name: IdTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryTests.IdTest
+      resultStatus: 1
+      duration: 0.0000814
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1291
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests][suite]
+    - id: 1292
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests.LeaderboardEntryInstanceTest]
+      name: LeaderboardEntryInstanceTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryTests.LeaderboardEntryInstanceTest
+      resultStatus: 1
+      duration: 0.0000842
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1291
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests][suite]
+    - id: 1296
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests.ScoreTest]
+      name: ScoreTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryTests.ScoreTest
+      resultStatus: 1
+      duration: 0.0001242
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1291
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests][suite]
+    - id: 1297
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests.UserIdTest]
+      name: UserIdTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryTests.UserIdTest
+      resultStatus: 1
+      duration: 0.0001175
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1291
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests][suite]
+    - id: 1298
+      uniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/LeaderboardEntryTests/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests.UserNameTest]
+      name: UserNameTest
+      fullName: Org.OpenAPITools.Test.Model.LeaderboardEntryTests.UserNameTest
+      resultStatus: 1
+      duration: 0.0000956
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1291
+      parentUniqueId: Org.OpenAPITools.Test.dll/Org/OpenAPITools/Test/Model/[Org.OpenAPITools.Test][Org.OpenAPITools.Test.Model.LeaderboardEntryTests][suite]
+    m_ResultText: Api (0.022s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 00dd4906
+      m_LastClickedID: 105504000
+      m_ExpandedIDs: b307e6839ee2f1915d726f965837a4a2a303c6a8aba2c4cf001c95e167397df1f201b9fa00dd49066ff1d523a572e72b1d877f35ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 15}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[GameJamTemplate][suite]'
+      name: GameJamTemplate
+      fullName: GameJamTemplate
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1004
+      uniqueId: '[Domain.Test][F:/source/Game-Dev/GMTK-jam-2024/Library/ScriptAssemblies/Domain.Test.dll][suite]'
+      name: Domain.Test.dll
+      fullName: F:/source/Game-Dev/GMTK-jam-2024/Library/ScriptAssemblies/Domain.Test.dll
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[GameJamTemplate][suite]'
+    - id: 1001
+      uniqueId: Domain.Test.dll/[Domain.Test][TestTest][suite]
+      name: TestTest
+      fullName: TestTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1004
+      parentUniqueId: '[Domain.Test][F:/source/Game-Dev/GMTK-jam-2024/Library/ScriptAssemblies/Domain.Test.dll][suite]'
+    - id: 1002
+      uniqueId: Domain.Test.dll/TestTest/[Domain.Test][TestTest.TestTestSimplePasses]
+      name: TestTestSimplePasses
+      fullName: TestTest.TestTestSimplePasses
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Domain.Test.dll/[Domain.Test][TestTest][suite]
+    - id: 1003
+      uniqueId: Domain.Test.dll/TestTest/[Domain.Test][TestTest.TestTestWithEnumeratorPasses]
+      name: TestTestWithEnumeratorPasses
+      fullName: TestTest.TestTestWithEnumeratorPasses
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Domain.Test.dll/[Domain.Test][TestTest][suite]
+    - id: 1185
+      uniqueId: '[SaveSystem.Test.dll][suite]'
+      name: SaveSystem.Test.dll
+      fullName: F:/source/Game-Dev/PirateJam2024/Library/ScriptAssemblies/SaveSystem.Test.dll
+      resultStatus: 1
+      duration: 0.142697
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[EnchantedForestTactics][suite]'
+    - id: 1186
+      uniqueId: SaveSystem.Test.dll/[SaveSystem][suite]
+      name: SaveSystem
+      fullName: SaveSystem
+      resultStatus: 1
+      duration: 0.1389152
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1185
+      parentUniqueId: '[SaveSystem.Test.dll][suite]'
+    - id: 1187
+      uniqueId: SaveSystem.Test.dll/SaveSystem/[SaveSystem.Test][SaveSystem.Test][suite]
+      name: Test
+      fullName: SaveSystem.Test
+      resultStatus: 1
+      duration: 0.1387005
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1186
+      parentUniqueId: SaveSystem.Test.dll/[SaveSystem][suite]
+    - id: 1184
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip][suite]
+      name: TestSaveDataRoundTrip
+      fullName: SaveSystem.Test.TestSaveDataRoundTrip
+      resultStatus: 1
+      duration: 0.0906149
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1195
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/[SaveSystem.Test][SaveSystem.Test][suite]
+    - id: 1186
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataRoundTrip/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip.WhenLoadsTypeDifferentThanSaved_Errors]
+      name: WhenLoadsTypeDifferentThanSaved_Errors
+      fullName: SaveSystem.Test.TestSaveDataRoundTrip.WhenLoadsTypeDifferentThanSaved_Errors
+      resultStatus: 1
+      duration: 0.0493056
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1184
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip][suite]
+    - id: 1189
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataRoundTrip/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip.WhenSaveContextDeleted_HandleRemainsValid]
+      name: WhenSaveContextDeleted_HandleRemainsValid
+      fullName: SaveSystem.Test.TestSaveDataRoundTrip.WhenSaveContextDeleted_HandleRemainsValid
+      resultStatus: 1
+      duration: 0.010096
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1184
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip][suite]
+    - id: 1185
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataRoundTrip/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip.WhenSavedDerivedTypeDirectly_SavesNoMetadata]
+      name: WhenSavedDerivedTypeDirectly_SavesNoMetadata
+      fullName: SaveSystem.Test.TestSaveDataRoundTrip.WhenSavedDerivedTypeDirectly_SavesNoMetadata
+      resultStatus: 1
+      duration: 0.004392
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1184
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip][suite]
+    - id: 1187
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataRoundTrip/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip.WhenSavedDifferentDerivedTypeDirectly_SavesNoMetadataInBoth]
+      name: WhenSavedDifferentDerivedTypeDirectly_SavesNoMetadataInBoth
+      fullName: SaveSystem.Test.TestSaveDataRoundTrip.WhenSavedDifferentDerivedTypeDirectly_SavesNoMetadataInBoth
+      resultStatus: 1
+      duration: 0.0078414
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1184
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip][suite]
+    - id: 1188
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataRoundTrip/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip.WhenSavedListOfDifferentDerivedTypeDirectly_SavesAllMetadataNeeded]
+      name: WhenSavedListOfDifferentDerivedTypeDirectly_SavesAllMetadataNeeded
+      fullName: SaveSystem.Test.TestSaveDataRoundTrip.WhenSavedListOfDifferentDerivedTypeDirectly_SavesAllMetadataNeeded
+      resultStatus: 1
+      duration: 0.0151488
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1184
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataRoundTrip][suite]
+    - id: 1187
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes][suite]
+      name: TestSaveDataWithSerializableAttributes
+      fullName: SaveSystem.Test.TestSaveDataWithSerializableAttributes
+      resultStatus: 1
+      duration: 0.0314102
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1199
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/[SaveSystem.Test][SaveSystem.Test][suite]
+    - id: 1190
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataWithSerializableAttributes/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenLoadsTypeDifferentSerializableType_ThanSaved_Errors]
+      name: WhenLoadsTypeDifferentSerializableType_ThanSaved_Errors
+      fullName: SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenLoadsTypeDifferentSerializableType_ThanSaved_Errors
+      resultStatus: 1
+      duration: 0.0040456
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1187
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes][suite]
+    - id: 1191
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataWithSerializableAttributes/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedDifferentDerivedSerializableTypeDirectly_SavesNoMetadataInBoth]
+      name: WhenSavedDifferentDerivedSerializableTypeDirectly_SavesNoMetadataInBoth
+      fullName: SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedDifferentDerivedSerializableTypeDirectly_SavesNoMetadataInBoth
+      resultStatus: 1
+      duration: 0.007834
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1187
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes][suite]
+    - id: 1192
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataWithSerializableAttributes/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedListOfDifferentDerivedSerializableTypeDirectly_KeepsMetadata_SavesPrivateFields]
+      name: WhenSavedListOfDifferentDerivedSerializableTypeDirectly_KeepsMetadata_SavesPrivateFields
+      fullName: SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedListOfDifferentDerivedSerializableTypeDirectly_KeepsMetadata_SavesPrivateFields
+      resultStatus: 1
+      duration: 0.0076543
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1187
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes][suite]
+    - id: 1193
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataWithSerializableAttributes/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedMonobehavior_ThrowsException]
+      name: WhenSavedMonobehavior_ThrowsException
+      fullName: SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedMonobehavior_ThrowsException
+      resultStatus: 1
+      duration: 0.0010955
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1187
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes][suite]
+    - id: 1189
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataWithSerializableAttributes/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedPartiallySerializableType_SavesPrivateSerializableFields]
+      name: WhenSavedPartiallySerializableType_SavesPrivateSerializableFields
+      fullName: SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedPartiallySerializableType_SavesPrivateSerializableFields
+      resultStatus: 1
+      duration: 0.0021967
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1187
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes][suite]
+    - id: 1188
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestSaveDataWithSerializableAttributes/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedSerializableType_SavesPrivateSerializableFields]
+      name: WhenSavedSerializableType_SavesPrivateSerializableFields
+      fullName: SaveSystem.Test.TestSaveDataWithSerializableAttributes.WhenSavedSerializableType_SavesPrivateSerializableFields
+      resultStatus: 1
+      duration: 0.0031089
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1187
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestSaveDataWithSerializableAttributes][suite]
+    - id: 1182
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestScript][suite]
+      name: TestScript
+      fullName: SaveSystem.Test.TestScript
+      resultStatus: 1
+      duration: 0.012985
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1187
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/[SaveSystem.Test][SaveSystem.Test][suite]
+    - id: 1183
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestScript/[SaveSystem.Test][SaveSystem.Test.TestScript.TestScriptSimplePasses]
+      name: TestScriptSimplePasses
+      fullName: SaveSystem.Test.TestScript.TestScriptSimplePasses
+      resultStatus: 1
+      duration: 0.0001303
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1182
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestScript][suite]
+    - id: 1184
+      uniqueId: SaveSystem.Test.dll/SaveSystem/Test/TestScript/[SaveSystem.Test][SaveSystem.Test.TestScript.TestScriptWithEnumeratorPasses]
+      name: TestScriptWithEnumeratorPasses
+      fullName: SaveSystem.Test.TestScript.TestScriptWithEnumeratorPasses
+      resultStatus: 1
+      duration: 0.0067446
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1182
+      parentUniqueId: SaveSystem.Test.dll/SaveSystem/Test/[SaveSystem.Test][SaveSystem.Test.TestScript][suite]
+    m_ResultText: Domain.Test.dll (3.851s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: c285112d
+      m_LastClickedID: 756123074
+      m_ExpandedIDs: f2b0db885d726f96e0776d994fd70ca38d9e6fa6574925b28a48ceb336475db7590f66ccc7a683d2a92506d7a89bdfd71daf94dc36345ce8b3faf9edea0813f4d09a10f5847fbff5668e22f67da36af60ea3c9104d02b313df50d81421a9fd1f6b348927837d7b2ac285112d7db1fe3f75b84a4a4a2fa94b374d82518fef7a56a2b1da5e5c48ba5f87a93a79ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: -1912
+    y: 435
+    width: 257
+    height: 620
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 98a00000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6cc5feffe0c6feff
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 8}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 4c969a2b90040154d917609493e03593
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: -1654
+    y: 435
+    width: 454
+    height: 620
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -207
+    m_ControlHash: 1412526313
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: -1912
+    y: 1076
+    width: 713
+    height: 261
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Scenes
+    m_Globs: []
+    m_OriginalText: 
+    m_ImportLogFlags: 0
+    m_FilterByTypeIntersection: 0
+  m_ViewMode: 0
+  m_StartGridSize: 16
+  m_LastFolders: []
+  m_LastFoldersGridSize: 16
+  m_LastProjectPath: F:\source\Game-Dev\PxLibForReal\PxLibDemoProject
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: c08b0000
+    m_LastClickedID: 35776
+    m_ExpandedIDs: 
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff0406000044060000ffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c623000048730000ac730000c073000010740000c0a90000b06efeff00370000586300009e600000ae620000b0620000ca010000102b01000eaa00000aaa0000b6640000b8640000ba640000b46400000a2a0000e86900000cb6000000000000786f00007e780000da6f00002e70000022700000267000001a7000001e7000002a700000366300003e630000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 16
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 156
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Scene
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 3477
+    y: 81
+    width: 1634
+    height: 799
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData:
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: -166, y: -1}
+      snapOffsetDelta: {x: -8, y: -25}
+      snapCorner: 3
+      id: Tool Settings
+      index: 0
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: -141, y: 149}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: unity-grid-and-snap-toolbar
+      index: 1
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-scene-view-toolbar
+      index: 0
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: unity-search-toolbar
+      index: 1
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: overlay-container--left
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-transform-toolbar
+      index: 0
+      layout: 2
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: overlay-container--left
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 197}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-component-tools
+      index: 1
+      layout: 2
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 67.5, y: 86}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Orientation
+      index: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Light Settings
+      index: 2
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Camera
+      index: 1
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Constraints
+      index: 3
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Collisions
+      index: 4
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Navmesh Display
+      index: 4
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Agent Display
+      index: 5
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Obstacle Display
+      index: 6
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Occlusion Culling
+      index: 5
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Physics Debugger
+      index: 6
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Scene Visibility
+      index: 7
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Particles
+      index: 8
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap
+      index: 11
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap Palette Helper
+      index: 12
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Open Tile Palette
+      index: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap Focus
+      index: 1
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Path
+      index: 9
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/TrailRenderer
+      index: 10
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: UnityEditor.SceneViewCameraOverlay
+      index: 11
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    m_OverlaysVisible: 1
+  m_WindowGUID: 7bd611111aad05c43825a4ce71d460c4
+  m_Gizmos: 1
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 1
+  m_SceneLighting: 1
+  m_2DMode: 1
+  m_isRotationLocked: 0
+  m_PlayAudio: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 1.1850601, y: -0.8298524, z: 0.09144419}
+  m_RenderMode: 0
+  m_CameraMode:
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
+  m_ValidateTrueMetals: 0
+  m_DoValidateTrueMetals: 0
+  m_SceneViewState:
+    m_AlwaysRefresh: 0
+    showFog: 1
+    showSkybox: 1
+    showFlares: 1
+    showImageEffects: 1
+    showParticleSystems: 1
+    showVisualEffectGraphs: 1
+    m_FxEnabled: 1
+  m_Grid:
+    xGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0}
+    yGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0}
+    zGrid:
+      m_Fade:
+        m_Target: 1
+        speed: 2
+        m_Value: 1
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    m_ShowGrid: 1
+    m_GridAxis: 1
+    m_gridOpacity: 0.5
+  m_Rotation:
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  m_Size:
+    m_Target: 10
+    speed: 2
+    m_Value: 0.85557026
+  m_Ortho:
+    m_Target: 1
+    speed: 2
+    m_Value: 1
+  m_CameraSettings:
+    m_Speed: 1
+    m_SpeedNormalized: 0.5
+    m_SpeedMin: 0.01
+    m_SpeedMax: 2
+    m_EasingEnabled: 1
+    m_EasingDuration: 0.4
+    m_AccelerationEnabled: 1
+    m_FieldOfViewHorizontalOrVertical: 60
+    m_NearClip: 0.03
+    m_FarClip: 10000
+    m_DynamicClip: 1
+    m_OcclusionCulling: 0
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewOrtho: 0
+  m_ReplacementShader: {fileID: 0}
+  m_ReplacementString: 
+  m_SceneVisActive: 1
+  m_LastLockedObject: {fileID: 0}
+  m_ViewIsLockedToObject: 0
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: -1198
+    y: 1025
+    width: 1189
+    height: 312
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1

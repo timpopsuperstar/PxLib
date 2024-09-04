@@ -21,10 +21,10 @@ A suite of tools useful when kickstarting a new unity project. Of particular not
 
 ## Install via Git Url
 Requires a version of unity that supports path query parameter for git packages (Unity >= 2019.3.4f1, Unity >= 2020.1a21).
-Add `https://github.com/dsmiller95/PxLib.git?path=com.pixelgroover.pxlib#0.1.0` to Package Manager. replace "0.1.0" with the
+Add `https://github.com/timpopsuperstar/PxLib.git?path=com.pixelgroover.pxlib#0.1.0` to Package Manager. replace "0.1.0" with the
 current version, or omit to always pull the latest version.
 
-or add `"com.pixelgroover.pxlib": "https://github.com/dsmiller95/PxLib.git?path=com.pixelgroover.pxlib#0.1.0"` to Packages/manifest.json.
+or add `"com.pixelgroover.pxlib": "https://github.com/timpopsuperstar/PxLib.git?path=com.pixelgroover.pxlib#0.1.0"` to Packages/manifest.json.
 
 
 ## Install via Openupm
@@ -40,7 +40,7 @@ To install while allowing changes to the source, clone the repository and add it
 Clone the repository as a sibling to your unity project folder. If your unity project is at `C:\source\Game-Dev\PixelPlatformer`, then clone PxLib into `C:\source\Game-Dev\PxLib` . For example:
 
 ```sh
-git clone PxLib git@github.com:dsmiller95/PxLib.git
+git clone PxLib git@github.com:timpopsuperstar/PxLib.git
 ```
 
 Then add `"com.pixelgroover.pxlib": "file:../../PxLib/com.pixelgroover.pxlib"` to your unity project's Packages/manifest.json 

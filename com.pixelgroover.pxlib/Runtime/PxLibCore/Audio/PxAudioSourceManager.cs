@@ -7,6 +7,23 @@ public class PxAudioSourceManager : MonoBehaviour
     private const int NUMBER_OF_SFX_CHANNELS = 8;
     private static PxAudioSourceManager _instance;
     
+    public static PxAudioSourceManager Instance
+    {
+        get
+        {
+            if(_instance != null)
+            {
+                return _instance;
+            }
+            _instance = FindObjectOfType<PxAudioSourceManager>();
+            if(_instance == null)
+            {
+                _instance = CreateInstance();
+            }
+            return _instance;
+        }
+    }
+    
     public List<AudioSource> SfxPlayers => _sfxPlayers;
     public AudioSource BgmPlayer => _bgmPlayer;
 

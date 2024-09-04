@@ -12,12 +12,12 @@ public static class PxAudioPlayer
             {
                 return _sfxPlayers;
             }
-            _sfxPlayers = SCBattleManager.Instance.SfxPlayers;
+            _sfxPlayers = PxAudioSourceManager.Instance.SfxPlayers;
             return _sfxPlayers;
         }
     }
     private static List<AudioSource> _sfxPlayers;
-    private static AudioSource BgmPlayer => _bgmPlayer ? _bgmPlayer : SCBattleManager.Instance.BgmPlayer;
+    private static AudioSource BgmPlayer => _bgmPlayer ? _bgmPlayer : PxAudioSourceManager.Instance.BgmPlayer;
     private static AudioSource _bgmPlayer;
     private static PxAudioSourceManager _audioSourceManager;
 
@@ -50,7 +50,7 @@ public static class PxAudioPlayer
             return;
         if (_bgmCoroutine != null)
         {
-            GameManager.Instance.StopCoroutine(_bgmCoroutine);
+            PxAudioSourceManager.Instance.StopCoroutine(_bgmCoroutine);
         }
         _bgmCoroutine = _audioSourceManager.StartCoroutine(IEPlayBgmWithIntro(intro, loop));
     }

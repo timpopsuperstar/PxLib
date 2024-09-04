@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[RequireComponent(typeof(PxShaderController))]
+[RequireComponent(typeof(PxSpriteShader))]
 //[ExecuteAlways]
 public class PxShaderEffectCollector : MonoBehaviour
 {
-    private PxShaderController _spriteRenderer;
-    public PxShaderController SpriteShader => _spriteRenderer ? _spriteRenderer : (_spriteRenderer = GetComponent<PxShaderController>());
+    private PxSpriteShader _spriteRenderer;
+    public PxSpriteShader SpriteShader => _spriteRenderer ? _spriteRenderer : (_spriteRenderer = GetComponent<PxSpriteShader>());
 
     [SerializeField] private List<PxShaderEffect> activeEffects = new List<PxShaderEffect>();
 
@@ -90,7 +90,7 @@ public class PxShaderEffectCollector : MonoBehaviour
         }
     }
 
-    private static void ApplyShaderParam(ShaderParamWrapper paramWrapper, PxShaderController toShader)
+    private static void ApplyShaderParam(ShaderParamWrapper paramWrapper, PxSpriteShader toShader)
     {
         var blendScaling = paramWrapper.Effect.EffectScale;
         var param = paramWrapper.Param;

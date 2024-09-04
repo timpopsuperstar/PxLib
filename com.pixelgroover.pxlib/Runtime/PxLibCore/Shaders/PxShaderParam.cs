@@ -39,7 +39,7 @@ public class PxShaderParam
 
 public static class PxShaderEnumExtensions
 {
-    public static float? GetIntensity(this PxShaderController fromShader, PxShaderParamType ofParam)
+    public static float? GetIntensity(this PxSpriteShader fromShader, PxShaderParamType ofParam)
     {
         switch (ofParam)
         {
@@ -57,7 +57,7 @@ public static class PxShaderEnumExtensions
                 return null;
         }
     }
-    public static void SetIntensity(this PxShaderController toShader, PxShaderParamType ofParam, float value)
+    public static void SetIntensity(this PxSpriteShader toShader, PxShaderParamType ofParam, float value)
     {
         switch (ofParam)
         {
@@ -81,7 +81,7 @@ public static class PxShaderEnumExtensions
         }
     }
     
-    public static Color? GetColor(this PxShaderController fromShader, PxShaderParamType ofParam)
+    public static Color? GetColor(this PxSpriteShader fromShader, PxShaderParamType ofParam)
     {
         switch (ofParam)
         {
@@ -98,7 +98,7 @@ public static class PxShaderEnumExtensions
         }
     }
     
-    public static void SetColor(this PxShaderController toShader, PxShaderParamType ofParam, Color value)
+    public static void SetColor(this PxSpriteShader toShader, PxShaderParamType ofParam, Color value)
     {
         switch (ofParam)
         {

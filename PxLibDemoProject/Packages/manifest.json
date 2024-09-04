@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.cysharp.unitask": "2.5.5",
     "com.pixelgroover.pxlib": "file:../../com.pixelgroover.pxlib",
     "com.unity.addressables": "1.22.2",
     "com.unity.collab-proxy": "2.4.4",
@@ -45,13 +44,5 @@
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
   },
-  "scopedRegistries": [
-    {
-      "name": "package.openupm.com",
-      "url": "https://package.openupm.com",
-      "scopes": [
-        "com.cysharp.unitask"
-      ]
-    }
-  ]
+  "scopedRegistries": []
 }

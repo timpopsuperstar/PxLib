@@ -1,0 +1,15 @@
+{
+  "name": "com.pixelgroover.pxlib",
+  "version": "0.2.0",
+  "displayName": "PxLib",
+  "description": "Utilities and tools for making games faster",
+  "unity": "2022.3",
+  "dependencies": {
+    "com.cysharp.unitask": "2.5.5",
+    "com.unity.addressables": "1.22.2",
+    "com.unity.inputsystem": "1.7.0"
+  },
+  "author": {
+    "name": "Pixelgroover LLC"
+  }
+}

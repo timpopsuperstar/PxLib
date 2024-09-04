@@ -11,7 +11,7 @@ public class PxShaderEffectCollector : MonoBehaviour
     private PxShaderController _spriteRenderer;
     public PxShaderController SpriteShader => _spriteRenderer ? _spriteRenderer : (_spriteRenderer = GetComponent<PxShaderController>());
 
-    [SerializeField] private List<PxShaderEffect> activeEffects = new();
+    [SerializeField] private List<PxShaderEffect> activeEffects = new List<PxShaderEffect>();
 
     private void OnEnable()
     {

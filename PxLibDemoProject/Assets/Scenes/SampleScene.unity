@@ -163,7 +163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 42391233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce72a6822adf4c2d9878486ebab8c1c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 210cac3d8d504a08bef6e3637129a77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   effectName: pinkEffect
@@ -174,7 +174,7 @@ MonoBehaviour:
     paramColor: {r: 0, g: 0, b: 0, a: 0}
     paramIntensity: 1
     blendType: 0
-  effectScale: 0.547
+  effectScale: 0.378
 --- !u!1 &268360206
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 268360206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcee5b7fbbfeac74f8f884f0308aaf1f, type: 3}
+  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &268360208
@@ -215,13 +215,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 268360206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42cb0c75faa2444e89db94334aaa75a, type: 3}
+  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _opacity: 1
   _colorBlending: 1
   _colorColor: {r: 0.5327544, g: 1, b: 0, a: 1}
-  _colorIntensity: 0.59
+  _colorIntensity: 0.633
   _addBlending: 0
   _addColor: {r: 1, g: 1, b: 1, a: 1}
   _addIntensity: 0
@@ -253,7 +253,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ad294b4ee078b744b4b012e6fcda8bf, type: 2}
+  - {fileID: 2100000, guid: 1ed068577959dbc4a803e28652f6d4c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 456408206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce72a6822adf4c2d9878486ebab8c1c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 210cac3d8d504a08bef6e3637129a77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   effectName: greyscale stack
@@ -337,7 +337,7 @@ MonoBehaviour:
     paramColor: {r: 0, g: 0, b: 0, a: 0}
     paramIntensity: 1
     blendType: 0
-  effectScale: 1
+  effectScale: 0.383
 --- !u!4 &456408208
 Transform:
   m_ObjectHideFlags: 0
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 911591171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcee5b7fbbfeac74f8f884f0308aaf1f, type: 3}
+  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &911591173
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 911591171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42cb0c75faa2444e89db94334aaa75a, type: 3}
+  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _opacity: 1
@@ -523,7 +523,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ad294b4ee078b744b4b012e6fcda8bf, type: 2}
+  - {fileID: 2100000, guid: 1ed068577959dbc4a803e28652f6d4c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231464151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcee5b7fbbfeac74f8f884f0308aaf1f, type: 3}
+  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1231464153
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231464151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42cb0c75faa2444e89db94334aaa75a, type: 3}
+  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _opacity: 1
@@ -648,7 +648,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ad294b4ee078b744b4b012e6fcda8bf, type: 2}
+  - {fileID: 2100000, guid: 1ed068577959dbc4a803e28652f6d4c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384937682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce72a6822adf4c2d9878486ebab8c1c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 210cac3d8d504a08bef6e3637129a77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   effectName: basline
@@ -752,13 +752,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384937682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca2ab046d7345b1b46e37658f55c100, type: 3}
+  m_Script: {fileID: 11500000, guid: 04c798336bcb442aa1ea357f8e0acd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activeEffects:
   - {fileID: 1384937683}
-  - {fileID: 456408207}
   - {fileID: 42391235}
+  - {fileID: 456408207}
 --- !u!114 &1384937685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,7 +768,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384937682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcee5b7fbbfeac74f8f884f0308aaf1f, type: 3}
+  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1384937686
@@ -780,13 +780,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384937682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42cb0c75faa2444e89db94334aaa75a, type: 3}
+  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _opacity: 1
   _colorBlending: 1
   _colorColor: {r: 0.85884666, g: 0, b: 1, a: 1}
-  _colorIntensity: 0.547
+  _colorIntensity: 0.378
   _addBlending: 0
   _addColor: {r: 0, g: 0, b: 0, a: 0}
   _addIntensity: 0
@@ -794,7 +794,7 @@ MonoBehaviour:
   _multiplyColor: {r: 0, g: 0, b: 0, a: 0}
   _multiplyIntensity: 0
   _grayscaleBlending: 1
-  _grayscaleIntensity: 1
+  _grayscaleIntensity: 0.383
   _transparencyCutoff: 0
   _transCutoffPos: 0
   _transCutoffGradient: 0
@@ -818,7 +818,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ad294b4ee078b744b4b012e6fcda8bf, type: 2}
+  - {fileID: 2100000, guid: 1ed068577959dbc4a803e28652f6d4c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -895,7 +895,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1901691914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcee5b7fbbfeac74f8f884f0308aaf1f, type: 3}
+  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1901691916
@@ -907,9 +907,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1901691914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42cb0c75faa2444e89db94334aaa75a, type: 3}
+  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _opacity: 1
+  _colorBlending: 0
+  _colorColor: {r: 1, g: 1, b: 1, a: 1}
+  _colorIntensity: 0
+  _addBlending: 0
+  _addColor: {r: 1, g: 1, b: 1, a: 1}
+  _addIntensity: 0
+  _multiplyBlending: 0
+  _multiplyColor: {r: 0, g: 0, b: 0, a: 1}
+  _multiplyIntensity: 0
+  _grayscaleBlending: 0
+  _grayscaleIntensity: 0
+  _transparencyCutoff: 0
+  _transCutoffPos: 0
+  _transCutoffGradient: 0
 --- !u!212 &1901691917
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -930,7 +945,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ad294b4ee078b744b4b012e6fcda8bf, type: 2}
+  - {fileID: 2100000, guid: 1ed068577959dbc4a803e28652f6d4c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

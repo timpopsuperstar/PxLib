@@ -186,7 +186,6 @@ GameObject:
   - component: {fileID: 268360210}
   - component: {fileID: 268360209}
   - component: {fileID: 268360208}
-  - component: {fileID: 268360207}
   m_Layer: 0
   m_Name: color blending
   m_TagString: Untagged
@@ -194,18 +193,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &268360207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268360206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &268360208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +202,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 268360206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
+  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _opacity: 1
@@ -456,7 +443,6 @@ GameObject:
   - component: {fileID: 911591175}
   - component: {fileID: 911591174}
   - component: {fileID: 911591173}
-  - component: {fileID: 911591172}
   m_Layer: 0
   m_Name: multiply blending
   m_TagString: Untagged
@@ -464,18 +450,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &911591172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911591171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &911591173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +459,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 911591171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
+  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _opacity: 1
@@ -581,7 +555,6 @@ GameObject:
   - component: {fileID: 1231464155}
   - component: {fileID: 1231464154}
   - component: {fileID: 1231464153}
-  - component: {fileID: 1231464152}
   m_Layer: 0
   m_Name: grayscale blending
   m_TagString: Untagged
@@ -589,18 +562,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1231464152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231464151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1231464153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,7 +571,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231464151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
+  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _opacity: 1
@@ -706,7 +667,6 @@ GameObject:
   - component: {fileID: 1384937688}
   - component: {fileID: 1384937687}
   - component: {fileID: 1384937686}
-  - component: {fileID: 1384937685}
   - component: {fileID: 1384937684}
   - component: {fileID: 1384937683}
   m_Layer: 0
@@ -759,18 +719,6 @@ MonoBehaviour:
   - {fileID: 1384937683}
   - {fileID: 42391235}
   - {fileID: 456408207}
---- !u!114 &1384937685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384937682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1384937686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,7 +728,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384937682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
+  m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _opacity: 1
@@ -878,7 +826,6 @@ GameObject:
   - component: {fileID: 1901691918}
   - component: {fileID: 1901691917}
   - component: {fileID: 1901691916}
-  - component: {fileID: 1901691915}
   m_Layer: 0
   m_Name: add blending
   m_TagString: Untagged
@@ -886,7 +833,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1901691915
+--- !u!114 &1901691916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -898,25 +845,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1901691916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901691914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   _opacity: 1
   _colorBlending: 0
   _colorColor: {r: 1, g: 1, b: 1, a: 1}
   _colorIntensity: 0
-  _addBlending: 0
+  _addBlending: 1
   _addColor: {r: 1, g: 1, b: 1, a: 1}
-  _addIntensity: 0
+  _addIntensity: 0.41
   _multiplyBlending: 0
   _multiplyColor: {r: 0, g: 0, b: 0, a: 1}
   _multiplyIntensity: 0

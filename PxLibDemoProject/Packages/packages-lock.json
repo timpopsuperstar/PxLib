@@ -12,7 +12,9 @@
       "depth": 0,
       "source": "local",
       "dependencies": {
-        "com.cysharp.unitask": "2.5.5"
+        "com.cysharp.unitask": "2.5.5",
+        "com.unity.addressables": "1.22.2",
+        "com.unity.inputsystem": "1.7.0"
       }
     },
     "com.unity.2d.animation": {

@@ -8,7 +8,15 @@ public class PxSpriteShader : MonoBehaviour, IHavePxShaderMaterial
     //Base Properties
     MaterialPropertyBlock PropertyBlock
     {
-        get => _propertyBlock ??= new MaterialPropertyBlock();
+        get
+        {
+            if (_propertyBlock != null)
+            {
+                return _propertyBlock;
+            }
+            _propertyBlock = new MaterialPropertyBlock();
+            return _propertyBlock;
+        }
         set => _propertyBlock = value;
     }
     private MaterialPropertyBlock _propertyBlock;

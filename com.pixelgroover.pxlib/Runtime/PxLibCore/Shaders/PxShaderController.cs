@@ -9,10 +9,10 @@ public interface IHavePxShaderMaterial
     /// <summary>
     /// set the property block values
     /// </summary>
-    public void UpdateMaterial(Action<MaterialPropertyBlock> makeUpdates);
+    void UpdateMaterial(Action<MaterialPropertyBlock> makeUpdates);
 
     [CanBeNull]
-    public Sprite GetSprite();
+    Sprite GetSprite();
 }
 
 public class PxShaderController: MonoBehaviour

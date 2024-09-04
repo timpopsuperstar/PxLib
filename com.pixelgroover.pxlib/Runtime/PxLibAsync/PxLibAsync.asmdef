@@ -17,8 +17,8 @@
     "versionDefines": [
         {
             "name": "com.cysharp.unitask",
-            "expression": "HAS_UNITASK",
-            "define": ""
+            "expression": "",
+            "define": "HAS_UNITASK"
         }
     ],
     "noEngineReferences": false

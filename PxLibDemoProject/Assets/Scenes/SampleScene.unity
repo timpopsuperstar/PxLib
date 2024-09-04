@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 268360210}
   - component: {fileID: 268360209}
   - component: {fileID: 268360211}
+  - component: {fileID: 268360212}
   m_Layer: 0
   m_Name: color blending
   m_TagString: Untagged
@@ -219,10 +220,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &268360212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268360206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _opacity: 1
   _colorBlending: 1
-  _colorColor: {r: 0.08050018, g: 0.6320754, b: 0.13610753, a: 1}
-  _colorIntensity: 0.484
+  _colorColor: {r: 0.7952348, g: 0.9811321, b: 0.24528302, a: 1}
+  _colorIntensity: 0.585
   _addBlending: 0
   _addColor: {r: 1, g: 1, b: 1, a: 1}
   _addIntensity: 0
@@ -337,6 +350,7 @@ GameObject:
   - component: {fileID: 911591175}
   - component: {fileID: 911591174}
   - component: {fileID: 911591176}
+  - component: {fileID: 911591177}
   m_Layer: 0
   m_Name: multiply blending
   m_TagString: Untagged
@@ -423,6 +437,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &911591177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911591171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _opacity: 1
   _colorBlending: 0
   _colorColor: {r: 1, g: 1, b: 1, a: 1}
@@ -431,8 +457,8 @@ MonoBehaviour:
   _addColor: {r: 1, g: 1, b: 1, a: 1}
   _addIntensity: 0
   _multiplyBlending: 1
-  _multiplyColor: {r: 0.46226418, g: 0.39952713, b: 0.2769224, a: 1}
-  _multiplyIntensity: 0.718
+  _multiplyColor: {r: 0.7887493, g: 0.8679245, b: 0.20879315, a: 1}
+  _multiplyIntensity: 0.777
   _grayscaleBlending: 0
   _grayscaleIntensity: 0
   _transparencyCutoff: 0
@@ -449,6 +475,7 @@ GameObject:
   - component: {fileID: 1231464155}
   - component: {fileID: 1231464154}
   - component: {fileID: 1231464156}
+  - component: {fileID: 1231464157}
   m_Layer: 0
   m_Name: grayscale blending
   m_TagString: Untagged
@@ -535,6 +562,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1231464157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231464151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _opacity: 1
   _colorBlending: 0
   _colorColor: {r: 1, g: 1, b: 1, a: 1}
@@ -546,7 +585,7 @@ MonoBehaviour:
   _multiplyColor: {r: 0, g: 0, b: 0, a: 1}
   _multiplyIntensity: 0
   _grayscaleBlending: 1
-  _grayscaleIntensity: 0.5
+  _grayscaleIntensity: 0.872
   _transparencyCutoff: 0
   _transCutoffPos: 0
   _transCutoffGradient: 0
@@ -561,6 +600,7 @@ GameObject:
   - component: {fileID: 1901691918}
   - component: {fileID: 1901691917}
   - component: {fileID: 1901691919}
+  - component: {fileID: 1901691920}
   m_Layer: 0
   m_Name: add blending
   m_TagString: Untagged
@@ -647,13 +687,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f709b16b792a2e3419bdba4058139dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1901691920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901691914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612db3d07065410aab308af292adca3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _opacity: 1
   _colorBlending: 0
   _colorColor: {r: 1, g: 1, b: 1, a: 1}
   _colorIntensity: 0
   _addBlending: 1
   _addColor: {r: 1, g: 1, b: 1, a: 1}
-  _addIntensity: 0.404
+  _addIntensity: 0.564
   _multiplyBlending: 0
   _multiplyColor: {r: 0, g: 0, b: 0, a: 1}
   _multiplyIntensity: 0

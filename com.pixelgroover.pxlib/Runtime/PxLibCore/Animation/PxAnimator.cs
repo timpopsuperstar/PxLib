@@ -11,8 +11,11 @@ public class PxAnimator : MonoBehaviour
     public event System.Action OnAnimComplete;
     //Serialized Fields
     //[SerializeField] public Anim CurrentAnim { get; private set; }
-    [SerializeField] public Anim CurrentAnim => _currentAnim;
+    public Anim CurrentAnim => _currentAnim;
     [SerializeField] private Anim _currentAnim;
+
+    [SerializeField] private bool _emitDebugLogs = false;
+    
     //Properties
     public bool AnimComplete => CurrentFrameIndex >= CurrentAnim.FrameCount;
     public bool Playing { get; private set; }
@@ -29,6 +32,10 @@ public class PxAnimator : MonoBehaviour
             SpriteRenderer.sprite = value;
             OnSpriteChange?.Invoke(value);
         }
+    }
+    private int SortingLayer
+    {
+        set => SpriteRenderer.sortingOrder = value;
     }
 
     //Variables
@@ -51,6 +58,7 @@ public class PxAnimator : MonoBehaviour
         {
             if (!CurrentAnim.Loop)
             {
+                Trace($"Completed animation, no loop {CurrentAnim.name}");
                 Playing = false;
                 OnAnimComplete?.Invoke();
                 return;
@@ -66,16 +74,22 @@ public class PxAnimator : MonoBehaviour
     {
         if (anim == CurrentAnim && Playing || anim == null)
         {
+            Trace($"Attempted to play animation {anim}. But was rejected. currently playing {CurrentAnim}");
             return;
         }
         PreviousAnim = CurrentAnim;
         _currentAnim = anim;
+        Trace($"Playing {CurrentAnim}. Previous anim is {PreviousAnim}");
         CurrentFrameIndex = -1;
         NextFrameTime = Time.time;
         Playing = true;
+        if (CurrentAnim.OverrideSortingLayer)
+        {
+            SortingLayer = CurrentAnim.SortingLayer;
+        }
         if (anim.Sfx)
         {
-            PlaySfx(anim.Sfx);
+            PlaySfx(anim.Sfx, anim.AllowSfxOverlap);
         }
     }
     public void SetFrame(Anim anim, int framePosition)
@@ -105,8 +119,16 @@ public class PxAnimator : MonoBehaviour
         }
     }
     //Private Methods
-    private void PlaySfx(AudioClip sfx)
+    private void PlaySfx(AudioClip sfx, bool allowOverlap)
     {
-        //PxAudioPlayer.PlaySfx(sfx);
+        PxAudioPlayer.PlaySfx(sfx, allowOverlap);
+    }
+    
+    private void Trace(string message)
+    {
+        if (_emitDebugLogs)
+        {
+            Debug.Log("PxAnimator: " + message, this);
+        }
     }
 }
